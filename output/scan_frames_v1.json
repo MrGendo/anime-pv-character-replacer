@@ -1,0 +1,26 @@
+[
+ {
+  "frame_idx": 1,
+  "t_sec": 2.0,
+  "image": "f_0001.jpg",
+  "raw": "ERROR: HTTP Error 429: Too Many Requests"
+ },
+ {
+  "frame_idx": 2,
+  "t_sec": 4.0,
+  "image": "f_0002.jpg",
+  "raw": "ERROR: HTTP Error 429: Too Many Requests"
+ },
+ {
+  "frame_idx": 3,
+  "t_sec": 6.0,
+  "image": "f_0003.jpg",
+  "raw": "ERROR: HTTP Error 429: Too Many Requests"
+ },
+ {
+  "frame_idx": 4,
+  "t_sec": 8.0,
+  "image": "f_0004.jpg",
+  "raw": "ERROR: HTTP Error 429: Too Many Requests"
+ }
+]

@@ -1,0 +1,74 @@
+[
+ {
+  "frame_idx": 1,
+  "t_sec": 8.0,
+  "image": "q_01.jpg",
+  "raw": "people: 1\nshot: lone figure at desk\nmotion: static\nnotes: dark hair, black tracksuit, standing by window with tatami floor and bookshelf."
+ },
+ {
+  "frame_idx": 2,
+  "t_sec": 16.0,
+  "image": "q_02.jpg",
+  "raw": "people: 0\nshot: floating island with waterfall and castle\nmotion: static\nnotes: bright blue sky, lush greenery, white castle, Japanese text overlay"
+ },
+ {
+  "frame_idx": 3,
+  "t_sec": 24.0,
+  "image": "q_03.jpg",
+  "raw": "people: 1\nshot: girl peeking from door\nmotion: static\nnotes: grey hair, pink outfit"
+ },
+ {
+  "frame_idx": 4,
+  "t_sec": 32.0,
+  "image": "q_04.jpg",
+  "raw": "people: 1\nshot: close-up girl\nmotion: static\nnotes: blonde hair, green eyes, white clothing, teal bow and feather earring"
+ },
+ {
+  "frame_idx": 5,
+  "t_sec": 40.0,
+  "image": "q_05.jpg",
+  "raw": "people: 1\nshot: character intro card\nmotion: static\nnotes: dark hair, red eyes, white outfit"
+ },
+ {
+  "frame_idx": 6,
+  "t_sec": 48.0,
+  "image": "q_06.jpg",
+  "raw": "people: 1\nshot: close-up girl\nmotion: static\nnotes: white hair, purple eyes, black collar"
+ },
+ {
+  "frame_idx": 7,
+  "t_sec": 56.0,
+  "image": "q_07.jpg",
+  "raw": "people: 1\nshot: close-up girl\nmotion: static\nnotes: white hair, purple eyes, white gloves, black collar, green forest background"
+ },
+ {
+  "frame_idx": 8,
+  "t_sec": 64.0,
+  "image": "q_08.jpg",
+  "raw": "people: 2\nshot: two characters facing glowing magic circle\nmotion: static\nnotes: boy with dark hair, girl with blonde hair and green bow, both in dark/red robes"
+ },
+ {
+  "frame_idx": 9,
+  "t_sec": 72.0,
+  "image": "q_09.jpg",
+  "raw": "people: 0\nshot: text\nmotion: static\nnotes: red glowing Japanese text on dark, fiery background with sparks. No characters visible."
+ },
+ {
+  "frame_idx": 10,
+  "t_sec": 80.0,
+  "image": "q_10.jpg",
+  "raw": "people: 0\nshot: text\nmotion: static\nnotes: fiery red glowing Japanese text on dark background with floating embers."
+ },
+ {
+  "frame_idx": 11,
+  "t_sec": 88.0,
+  "image": "q_11.jpg",
+  "raw": "people: 1\nshot: character mid-air with glowing red arms\nmotion: action\nnotes: brown hair, black jacket, white shirt, dark pants, glowing red scarf-like arms"
+ },
+ {
+  "frame_idx": 12,
+  "t_sec": 96.0,
+  "image": "q_12.jpg",
+  "raw": "people: 4\nshot: promotional poster with characters and text\nmotion: static\nnotes: purple, blonde, white hair; white, red, grey clothing; urban night background"
+ }
+]

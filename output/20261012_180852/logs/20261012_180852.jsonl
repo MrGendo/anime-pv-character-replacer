@@ -1,0 +1,2 @@
+{"ts": "2026-10-12T18:08:52.588", "run_id": "20261012_180852", "stage": "shots", "event": "shots.start", "data": {"video": "assets/raw_pv/magical_explorer_pv1_1080p.mp4", "duration_s": 98.151, "fps": 23.976024}}
+{"ts": "2026-10-12T18:08:57.209", "run_id": "20261012_180852", "stage": "shots", "event": "shots.done", "data": {"n_shots": 53, "shots_json": "output/20261012_180852/detection/shots.json", "first_shots": [[0.0, 1.335], [1.335, 2.836], [2.836, 4.63], [4.63, 6.048], [6.048, 7.049]]}}

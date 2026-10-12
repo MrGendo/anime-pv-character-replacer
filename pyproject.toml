@@ -1,0 +1,27 @@
+[project]
+name = "anime-pv-replacer"
+version = "0.1.0"
+description = "动画 PV 人物替换管线:切片、人物定位/跟踪、标准人设替换、合成导出与评估"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.0",
+    "opencv-python>=4.10",
+    "pillow>=10.4",
+    "httpx>=0.27",
+    # 契约条款 1 要求 YAML 配置;pyyaml 为解析所必需,超出 TASK W1 交付清单所列 deps,属记录在案的偏离
+    "pyyaml>=6.0",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/anime_pv_replacer"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

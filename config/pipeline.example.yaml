@@ -1,0 +1,90 @@
+# 示例配置 — 各键含义与默认值说明(复制为 pipeline.yaml 后按需修改)
+#
+# 合并规则:本文件与 config.py 内置 DEFAULT_CONFIG 做深合并,
+# 这里的值覆盖默认值;值写 null 的键视为「未设置」,沿用默认值。
+
+# 配置结构版本(与管线能力版本对应,当前 0.1 = W1)
+version: "0.1"
+
+source:
+  # 源视频路径(相对项目根或绝对路径)
+  video_path: assets/raw_pv/your_video.mp4
+  # 素材原始出处(URL),留空表示本地文件
+  video_url: ""
+  # 版权/使用范围备注:替换产物的使用边界要在这里写清楚
+  license_note: "仅本地研究用"
+
+# 切片段定义:name 会成为输出文件名(assets/segments/{name}.mp4)
+# start/end 单位秒;note 记录选段理由。
+# 建议先用 --stage shots 跑镜头边界检测,再按镜头边界回填 start/end。
+segments:
+  - name: A
+    start: 15
+    end: 20
+    note: "示例:占位时间,时间以镜头扫描结果为准"
+  - name: B
+    start: 60
+    end: 65
+    note: "示例:占位时间,时间以镜头扫描结果为准"
+
+paths:
+  # 素材根:segments/(切片产物)与 character_sheets/(人设图)都在其下
+  assets_root: assets
+  # 每次 run 的产物根:output/{run_id}/{stage}/
+  output_root: output
+  # 中间工作目录(帧缓存、临时权重等)
+  workdir_root: output/work
+
+# 人物检测(W2 波次生效)
+detection:
+  # 检测后端:固定 yolon(面向动画人物的 YOLO 变体)
+  method: yolon
+  # 检出置信度阈值,低于此分的目标丢弃
+  score_thresh: 0.35
+  # 推理设备:本机无 GPU,固定 cpu
+  device: cpu
+  # 单帧最多保留的人物数,超出按置信度取 top-K
+  max_persons: 4
+
+# 人物替换(W3 波次生效)
+replacement:
+  # 替换方法:stylization = 风格化 API 把人设图迁移到目标区域
+  method: stylization
+  api:
+    # 风格化服务 endpoint(本机服务直连,Python 内不走系统代理)
+    endpoint: "http://localhost:8000/v1/stylize"
+    # API key 的环境变量名 —— key 只从环境变量读,配置文件里严禁出现明文 key
+    key_env: ARK_API_KEY
+    # 模型名,留空用服务端默认
+    model: ""
+    # 失败重试次数
+    retries: 3
+    # 单次请求超时(秒)
+    timeout_s: 30
+  # 边缘融合宽度(像素):替换区域与原画过渡带
+  edge_blend_px: 12
+  # 过渡带羽化高斯 sigma
+  feather_sigma: 8
+
+# 目标跟踪(W2 波次生效)
+tracking:
+  # 轨迹平滑窗口(帧):奇数,中值/均值滤波用
+  smoothing_window: 7
+  # 检测丢目标后允许的最大空缺帧数,超过则断轨
+  max_gap_frames: 8
+
+# 导出编码(重编码路径的参数)
+export:
+  fps: 23.976
+  crf: 18
+  preset: slow
+
+# 替换质量评估(W4 波次生效)
+evaluation:
+  metrics: [ssim, lpips, clip_i, temporal_stability]
+  # 各指标加权合成总分,权重和应为 1
+  weights:
+    ssim: 0.3
+    lpips: 0.3
+    clip_i: 0.2
+    temporal_stability: 0.2

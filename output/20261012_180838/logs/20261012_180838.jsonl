@@ -1,0 +1,4 @@
+{"ts": "2026-10-12T18:08:38.510", "run_id": "20261012_180838", "stage": "cut", "event": "cut.start", "data": {"video": "assets/raw_pv/magical_explorer_pv1_1080p.mp4", "n_segments": 2}}
+{"ts": "2026-10-12T18:08:38.611", "run_id": "20261012_180838", "stage": "cut", "event": "cut.segment_done", "data": {"name": "A", "dst": "assets/segments/A.mp4", "expected_s": 5, "actual_s": 5.021}}
+{"ts": "2026-10-12T18:08:38.692", "run_id": "20261012_180838", "stage": "cut", "event": "cut.segment_done", "data": {"name": "B", "dst": "assets/segments/B.mp4", "expected_s": 5, "actual_s": 5.024}}
+{"ts": "2026-10-12T18:08:38.693", "run_id": "20261012_180838", "stage": "cut", "event": "cut.done", "data": {}}
