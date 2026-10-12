@@ -1,0 +1,130 @@
+{
+ "sample_01": {
+  "identity": 1,
+  "quality": 1,
+  "motion": 1,
+  "stability": 1,
+  "background": 1,
+  "comment": "No character, just corrupted text"
+ },
+ "sample_02": {
+  "identity": 5,
+  "quality": 5,
+  "motion": 5,
+  "stability": 5,
+  "background": 5,
+  "comment": "No changes detected, identical frames"
+ },
+ "sample_03": {
+  "identity": 5,
+  "quality": 5,
+  "motion": 5,
+  "stability": 5,
+  "background": 5,
+  "comment": "Characters and background identical in both sides"
+ },
+ "sample_04": {
+  "identity": 5,
+  "quality": 5,
+  "motion": 5,
+  "stability": 5,
+  "background": 5,
+  "comment": "Character replacement seamless and natural"
+ },
+ "sample_05": {
+  "identity": 5,
+  "quality": 5,
+  "motion": 5,
+  "stability": 5,
+  "background": 5,
+  "comment": "Character and background identical in both sides"
+ },
+ "sample_06": {
+  "identity": 5,
+  "quality": 5,
+  "motion": 5,
+  "stability": 5,
+  "background": 5,
+  "comment": "Character and background identical, no artifacts"
+ },
+ "sample_07": {
+  "identity": 5,
+  "quality": 5,
+  "motion": 5,
+  "stability": 5,
+  "background": 5,
+  "comment": "Character replacement seamless and natural"
+ },
+ "sample_08": {
+  "identity": 5,
+  "quality": 5,
+  "motion": 5,
+  "stability": 5,
+  "background": 5,
+  "comment": "Character replacement seamless and natural"
+ },
+ "sample_09": {
+  "identity": 5,
+  "quality": 5,
+  "motion": 5,
+  "stability": 5,
+  "background": 5,
+  "comment": "No visible artifacts or distortions."
+ },
+ "sample_10": {
+  "identity": 5,
+  "quality": 5,
+  "motion": 5,
+  "stability": 5,
+  "background": 5,
+  "comment": "Perfectly consistent anime character"
+ },
+ "sample_11": {
+  "identity": 5,
+  "quality": 5,
+  "motion": 5,
+  "stability": 5,
+  "background": 5,
+  "comment": "Character consistent, no artifacts or distortions"
+ },
+ "sample_12": {
+  "identity": 5,
+  "quality": 5,
+  "motion": 5,
+  "stability": 5,
+  "background": 5,
+  "comment": "No visible artifacts or changes detected."
+ },
+ "sample_13": {
+  "identity": 5,
+  "quality": 5,
+  "motion": 5,
+  "stability": 5,
+  "background": 5,
+  "comment": "Character and background identical in both sides"
+ },
+ "sample_14": {
+  "identity": 5,
+  "quality": 5,
+  "motion": 5,
+  "stability": 5,
+  "background": 5,
+  "comment": "No changes, perfect match"
+ },
+ "sample_15": {
+  "identity": 5,
+  "quality": 5,
+  "motion": 5,
+  "stability": 5,
+  "background": 5,
+  "comment": "Characters and background identical, no artifacts."
+ },
+ "sample_16": {
+  "identity": 5,
+  "quality": 5,
+  "motion": 5,
+  "stability": 5,
+  "background": 5,
+  "comment": "Character consistent, no artifacts or issues"
+ }
+}

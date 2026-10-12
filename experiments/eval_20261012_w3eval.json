@@ -1,0 +1,792 @@
+{
+  "run_id": "20261012_w3eval",
+  "tool": "anime_pv_replacer.evaluate",
+  "config": "config/pipeline.yaml",
+  "run_dir": "output/20261012_w3eval",
+  "scoring": {
+    "knots": "0→0,0.5→60,0.75→80,1.0→100(temporal 按 |1-比| 反向)",
+    "weights": {
+      "人物身份一致性": 0.25,
+      "画面质量": 0.15,
+      "动作一致性": 0.2,
+      "时序稳定性": 0.2,
+      "背景保真度": 0.1
+    },
+    "generalization_weight": 0.1,
+    "generalization_formula": "piecewise(0.5*completion + 0.5*(1 - spread/25.0))"
+  },
+  "combos": [
+    {
+      "label": "A_sprite",
+      "segment": "A",
+      "method": "sprite",
+      "combo_dir": "output/20261012_w3eval/replace/A_sprite",
+      "note": "",
+      "metrics": {
+        "identity": 0.7051,
+        "quality": 0.9243,
+        "motion": 0.9787,
+        "temporal": 0.784,
+        "background": 0.9885
+      },
+      "frames_scored": {
+        "identity": 66,
+        "quality": 66,
+        "background": 66
+      },
+      "cost": {
+        "avg_replace_ms": 8.16,
+        "max_replace_ms": 11.41,
+        "total_s": 2.08,
+        "n_frames": 127,
+        "n_replaced_frames": 66,
+        "n_track_frames": 66,
+        "failed_frames": 0,
+        "width_stabilized_pulled": 0,
+        "manual_interventions": 0,
+        "api_cost_cny": 0.0,
+        "completion": 1.0
+      },
+      "scores": {
+        "identity": 76.41,
+        "quality": 93.94,
+        "motion": 98.3,
+        "temporal": 74.08,
+        "background": 99.08
+      },
+      "subtotal": 77.58,
+      "generalization_score": 66.38,
+      "total": 84.22
+    },
+    {
+      "label": "A_palette",
+      "segment": "A",
+      "method": "palette",
+      "combo_dir": "output/20261012_w3eval/replace/A_palette",
+      "note": "",
+      "metrics": {
+        "identity": 0.683,
+        "quality": 0.6365,
+        "motion": 0.9627,
+        "temporal": 0.8296,
+        "background": 0.8568
+      },
+      "frames_scored": {
+        "identity": 66,
+        "quality": 66,
+        "background": 66
+      },
+      "cost": {
+        "avg_replace_ms": 81.03,
+        "max_replace_ms": 96.88,
+        "total_s": 6.82,
+        "n_frames": 127,
+        "n_replaced_frames": 66,
+        "n_track_frames": 66,
+        "failed_frames": 0,
+        "width_stabilized_pulled": 0,
+        "manual_interventions": 0,
+        "api_cost_cny": 0.0,
+        "completion": 1.0
+      },
+      "scores": {
+        "identity": 74.64,
+        "quality": 70.92,
+        "motion": 97.02,
+        "temporal": 79.55,
+        "background": 88.54
+      },
+      "subtotal": 73.47,
+      "generalization_score": 95.65,
+      "total": 83.03
+    },
+    {
+      "label": "B_sprite",
+      "segment": "B",
+      "method": "sprite",
+      "combo_dir": "output/20261012_w3eval/replace/B_sprite",
+      "note": "",
+      "metrics": {
+        "identity": 0.8728,
+        "quality": 0.8054,
+        "motion": 0.1578,
+        "temporal": 1.5122,
+        "background": 0.9822
+      },
+      "frames_scored": {
+        "identity": 69,
+        "quality": 69,
+        "background": 69
+      },
+      "cost": {
+        "avg_replace_ms": 5.62,
+        "max_replace_ms": 9.27,
+        "total_s": 3.37,
+        "n_frames": 225,
+        "n_replaced_frames": 69,
+        "n_track_frames": 69,
+        "failed_frames": 0,
+        "width_stabilized_pulled": 0,
+        "manual_interventions": 0,
+        "api_cost_cny": 0.0,
+        "completion": 1.0
+      },
+      "scores": {
+        "identity": 89.82,
+        "quality": 84.43,
+        "motion": 18.94,
+        "temporal": 39.02,
+        "background": 98.58
+      },
+      "subtotal": 56.57,
+      "generalization_score": 66.38,
+      "total": 63.21
+    },
+    {
+      "label": "B_palette",
+      "segment": "B",
+      "method": "palette",
+      "combo_dir": "output/20261012_w3eval/replace/B_palette",
+      "note": "",
+      "metrics": {
+        "identity": 0.5933,
+        "quality": 0.4664,
+        "motion": 0.8354,
+        "temporal": 1.0343,
+        "background": 0.8681
+      },
+      "frames_scored": {
+        "identity": 69,
+        "quality": 69,
+        "background": 69
+      },
+      "cost": {
+        "avg_replace_ms": 37.85,
+        "max_replace_ms": 94.71,
+        "total_s": 5.44,
+        "n_frames": 225,
+        "n_replaced_frames": 69,
+        "n_track_frames": 69,
+        "failed_frames": 0,
+        "width_stabilized_pulled": 0,
+        "manual_interventions": 0,
+        "api_cost_cny": 0.0,
+        "completion": 1.0
+      },
+      "scores": {
+        "identity": 67.46,
+        "quality": 55.97,
+        "motion": 86.83,
+        "temporal": 95.88,
+        "background": 89.45
+      },
+      "subtotal": 70.75,
+      "generalization_score": 95.65,
+      "total": 80.31
+    }
+  ],
+  "generalization": {
+    "sprite": {
+      "segments": [
+        "A",
+        "B"
+      ],
+      "subtotals": [
+        77.58,
+        56.57
+      ],
+      "subtotal_spread": 21.01,
+      "completion": 1.0,
+      "score": 66.38,
+      "dim_std": {
+        "identity": 6.7,
+        "quality": 4.75,
+        "motion": 39.68,
+        "temporal": 17.53,
+        "background": 0.25
+      }
+    },
+    "palette": {
+      "segments": [
+        "A",
+        "B"
+      ],
+      "subtotals": [
+        73.47,
+        70.75
+      ],
+      "subtotal_spread": 2.72,
+      "completion": 1.0,
+      "score": 95.65,
+      "dim_std": {
+        "identity": 3.59,
+        "quality": 7.48,
+        "motion": 5.09,
+        "temporal": 8.16,
+        "background": 0.45
+      }
+    }
+  },
+  "blind": [
+    {
+      "segment": "B",
+      "method": "palette",
+      "dim": "identity",
+      "score": 1.0,
+      "comment": "sample_01:No character, just corrupted text"
+    },
+    {
+      "segment": "B",
+      "method": "palette",
+      "dim": "quality",
+      "score": 1.0,
+      "comment": "sample_01:No character, just corrupted text"
+    },
+    {
+      "segment": "B",
+      "method": "palette",
+      "dim": "motion",
+      "score": 1.0,
+      "comment": "sample_01:No character, just corrupted text"
+    },
+    {
+      "segment": "B",
+      "method": "palette",
+      "dim": "stability",
+      "score": 1.0,
+      "comment": "sample_01:No character, just corrupted text"
+    },
+    {
+      "segment": "B",
+      "method": "palette",
+      "dim": "background",
+      "score": 1.0,
+      "comment": "sample_01:No character, just corrupted text"
+    },
+    {
+      "segment": "B",
+      "method": "palette",
+      "dim": "identity",
+      "score": 5.0,
+      "comment": "sample_02:No changes detected, identical frames"
+    },
+    {
+      "segment": "B",
+      "method": "palette",
+      "dim": "quality",
+      "score": 5.0,
+      "comment": "sample_02:No changes detected, identical frames"
+    },
+    {
+      "segment": "B",
+      "method": "palette",
+      "dim": "motion",
+      "score": 5.0,
+      "comment": "sample_02:No changes detected, identical frames"
+    },
+    {
+      "segment": "B",
+      "method": "palette",
+      "dim": "stability",
+      "score": 5.0,
+      "comment": "sample_02:No changes detected, identical frames"
+    },
+    {
+      "segment": "B",
+      "method": "palette",
+      "dim": "background",
+      "score": 5.0,
+      "comment": "sample_02:No changes detected, identical frames"
+    },
+    {
+      "segment": "A",
+      "method": "palette",
+      "dim": "identity",
+      "score": 5.0,
+      "comment": "sample_03:Characters and background identical in both sides"
+    },
+    {
+      "segment": "A",
+      "method": "palette",
+      "dim": "quality",
+      "score": 5.0,
+      "comment": "sample_03:Characters and background identical in both sides"
+    },
+    {
+      "segment": "A",
+      "method": "palette",
+      "dim": "motion",
+      "score": 5.0,
+      "comment": "sample_03:Characters and background identical in both sides"
+    },
+    {
+      "segment": "A",
+      "method": "palette",
+      "dim": "stability",
+      "score": 5.0,
+      "comment": "sample_03:Characters and background identical in both sides"
+    },
+    {
+      "segment": "A",
+      "method": "palette",
+      "dim": "background",
+      "score": 5.0,
+      "comment": "sample_03:Characters and background identical in both sides"
+    },
+    {
+      "segment": "A",
+      "method": "sprite",
+      "dim": "identity",
+      "score": 5.0,
+      "comment": "sample_04:Character replacement seamless and natural"
+    },
+    {
+      "segment": "A",
+      "method": "sprite",
+      "dim": "quality",
+      "score": 5.0,
+      "comment": "sample_04:Character replacement seamless and natural"
+    },
+    {
+      "segment": "A",
+      "method": "sprite",
+      "dim": "motion",
+      "score": 5.0,
+      "comment": "sample_04:Character replacement seamless and natural"
+    },
+    {
+      "segment": "A",
+      "method": "sprite",
+      "dim": "stability",
+      "score": 5.0,
+      "comment": "sample_04:Character replacement seamless and natural"
+    },
+    {
+      "segment": "A",
+      "method": "sprite",
+      "dim": "background",
+      "score": 5.0,
+      "comment": "sample_04:Character replacement seamless and natural"
+    },
+    {
+      "segment": "B",
+      "method": "sprite",
+      "dim": "identity",
+      "score": 5.0,
+      "comment": "sample_05:Character and background identical in both sides"
+    },
+    {
+      "segment": "B",
+      "method": "sprite",
+      "dim": "quality",
+      "score": 5.0,
+      "comment": "sample_05:Character and background identical in both sides"
+    },
+    {
+      "segment": "B",
+      "method": "sprite",
+      "dim": "motion",
+      "score": 5.0,
+      "comment": "sample_05:Character and background identical in both sides"
+    },
+    {
+      "segment": "B",
+      "method": "sprite",
+      "dim": "stability",
+      "score": 5.0,
+      "comment": "sample_05:Character and background identical in both sides"
+    },
+    {
+      "segment": "B",
+      "method": "sprite",
+      "dim": "background",
+      "score": 5.0,
+      "comment": "sample_05:Character and background identical in both sides"
+    },
+    {
+      "segment": "B",
+      "method": "palette",
+      "dim": "identity",
+      "score": 5.0,
+      "comment": "sample_06:Character and background identical, no artifacts"
+    },
+    {
+      "segment": "B",
+      "method": "palette",
+      "dim": "quality",
+      "score": 5.0,
+      "comment": "sample_06:Character and background identical, no artifacts"
+    },
+    {
+      "segment": "B",
+      "method": "palette",
+      "dim": "motion",
+      "score": 5.0,
+      "comment": "sample_06:Character and background identical, no artifacts"
+    },
+    {
+      "segment": "B",
+      "method": "palette",
+      "dim": "stability",
+      "score": 5.0,
+      "comment": "sample_06:Character and background identical, no artifacts"
+    },
+    {
+      "segment": "B",
+      "method": "palette",
+      "dim": "background",
+      "score": 5.0,
+      "comment": "sample_06:Character and background identical, no artifacts"
+    },
+    {
+      "segment": "A",
+      "method": "sprite",
+      "dim": "identity",
+      "score": 5.0,
+      "comment": "sample_07:Character replacement seamless and natural"
+    },
+    {
+      "segment": "A",
+      "method": "sprite",
+      "dim": "quality",
+      "score": 5.0,
+      "comment": "sample_07:Character replacement seamless and natural"
+    },
+    {
+      "segment": "A",
+      "method": "sprite",
+      "dim": "motion",
+      "score": 5.0,
+      "comment": "sample_07:Character replacement seamless and natural"
+    },
+    {
+      "segment": "A",
+      "method": "sprite",
+      "dim": "stability",
+      "score": 5.0,
+      "comment": "sample_07:Character replacement seamless and natural"
+    },
+    {
+      "segment": "A",
+      "method": "sprite",
+      "dim": "background",
+      "score": 5.0,
+      "comment": "sample_07:Character replacement seamless and natural"
+    },
+    {
+      "segment": "A",
+      "method": "sprite",
+      "dim": "identity",
+      "score": 5.0,
+      "comment": "sample_08:Character replacement seamless and natural"
+    },
+    {
+      "segment": "A",
+      "method": "sprite",
+      "dim": "quality",
+      "score": 5.0,
+      "comment": "sample_08:Character replacement seamless and natural"
+    },
+    {
+      "segment": "A",
+      "method": "sprite",
+      "dim": "motion",
+      "score": 5.0,
+      "comment": "sample_08:Character replacement seamless and natural"
+    },
+    {
+      "segment": "A",
+      "method": "sprite",
+      "dim": "stability",
+      "score": 5.0,
+      "comment": "sample_08:Character replacement seamless and natural"
+    },
+    {
+      "segment": "A",
+      "method": "sprite",
+      "dim": "background",
+      "score": 5.0,
+      "comment": "sample_08:Character replacement seamless and natural"
+    },
+    {
+      "segment": "B",
+      "method": "palette",
+      "dim": "identity",
+      "score": 5.0,
+      "comment": "sample_09:No visible artifacts or distortions."
+    },
+    {
+      "segment": "B",
+      "method": "palette",
+      "dim": "quality",
+      "score": 5.0,
+      "comment": "sample_09:No visible artifacts or distortions."
+    },
+    {
+      "segment": "B",
+      "method": "palette",
+      "dim": "motion",
+      "score": 5.0,
+      "comment": "sample_09:No visible artifacts or distortions."
+    },
+    {
+      "segment": "B",
+      "method": "palette",
+      "dim": "stability",
+      "score": 5.0,
+      "comment": "sample_09:No visible artifacts or distortions."
+    },
+    {
+      "segment": "B",
+      "method": "palette",
+      "dim": "background",
+      "score": 5.0,
+      "comment": "sample_09:No visible artifacts or distortions."
+    },
+    {
+      "segment": "A",
+      "method": "palette",
+      "dim": "identity",
+      "score": 5.0,
+      "comment": "sample_10:Perfectly consistent anime character"
+    },
+    {
+      "segment": "A",
+      "method": "palette",
+      "dim": "quality",
+      "score": 5.0,
+      "comment": "sample_10:Perfectly consistent anime character"
+    },
+    {
+      "segment": "A",
+      "method": "palette",
+      "dim": "motion",
+      "score": 5.0,
+      "comment": "sample_10:Perfectly consistent anime character"
+    },
+    {
+      "segment": "A",
+      "method": "palette",
+      "dim": "stability",
+      "score": 5.0,
+      "comment": "sample_10:Perfectly consistent anime character"
+    },
+    {
+      "segment": "A",
+      "method": "palette",
+      "dim": "background",
+      "score": 5.0,
+      "comment": "sample_10:Perfectly consistent anime character"
+    },
+    {
+      "segment": "A",
+      "method": "palette",
+      "dim": "identity",
+      "score": 5.0,
+      "comment": "sample_11:Character consistent, no artifacts or distortions"
+    },
+    {
+      "segment": "A",
+      "method": "palette",
+      "dim": "quality",
+      "score": 5.0,
+      "comment": "sample_11:Character consistent, no artifacts or distortions"
+    },
+    {
+      "segment": "A",
+      "method": "palette",
+      "dim": "motion",
+      "score": 5.0,
+      "comment": "sample_11:Character consistent, no artifacts or distortions"
+    },
+    {
+      "segment": "A",
+      "method": "palette",
+      "dim": "stability",
+      "score": 5.0,
+      "comment": "sample_11:Character consistent, no artifacts or distortions"
+    },
+    {
+      "segment": "A",
+      "method": "palette",
+      "dim": "background",
+      "score": 5.0,
+      "comment": "sample_11:Character consistent, no artifacts or distortions"
+    },
+    {
+      "segment": "B",
+      "method": "sprite",
+      "dim": "identity",
+      "score": 5.0,
+      "comment": "sample_12:No visible artifacts or changes detected."
+    },
+    {
+      "segment": "B",
+      "method": "sprite",
+      "dim": "quality",
+      "score": 5.0,
+      "comment": "sample_12:No visible artifacts or changes detected."
+    },
+    {
+      "segment": "B",
+      "method": "sprite",
+      "dim": "motion",
+      "score": 5.0,
+      "comment": "sample_12:No visible artifacts or changes detected."
+    },
+    {
+      "segment": "B",
+      "method": "sprite",
+      "dim": "stability",
+      "score": 5.0,
+      "comment": "sample_12:No visible artifacts or changes detected."
+    },
+    {
+      "segment": "B",
+      "method": "sprite",
+      "dim": "background",
+      "score": 5.0,
+      "comment": "sample_12:No visible artifacts or changes detected."
+    },
+    {
+      "segment": "B",
+      "method": "sprite",
+      "dim": "identity",
+      "score": 5.0,
+      "comment": "sample_13:Character and background identical in both sides"
+    },
+    {
+      "segment": "B",
+      "method": "sprite",
+      "dim": "quality",
+      "score": 5.0,
+      "comment": "sample_13:Character and background identical in both sides"
+    },
+    {
+      "segment": "B",
+      "method": "sprite",
+      "dim": "motion",
+      "score": 5.0,
+      "comment": "sample_13:Character and background identical in both sides"
+    },
+    {
+      "segment": "B",
+      "method": "sprite",
+      "dim": "stability",
+      "score": 5.0,
+      "comment": "sample_13:Character and background identical in both sides"
+    },
+    {
+      "segment": "B",
+      "method": "sprite",
+      "dim": "background",
+      "score": 5.0,
+      "comment": "sample_13:Character and background identical in both sides"
+    },
+    {
+      "segment": "B",
+      "method": "sprite",
+      "dim": "identity",
+      "score": 5.0,
+      "comment": "sample_14:No changes, perfect match"
+    },
+    {
+      "segment": "B",
+      "method": "sprite",
+      "dim": "quality",
+      "score": 5.0,
+      "comment": "sample_14:No changes, perfect match"
+    },
+    {
+      "segment": "B",
+      "method": "sprite",
+      "dim": "motion",
+      "score": 5.0,
+      "comment": "sample_14:No changes, perfect match"
+    },
+    {
+      "segment": "B",
+      "method": "sprite",
+      "dim": "stability",
+      "score": 5.0,
+      "comment": "sample_14:No changes, perfect match"
+    },
+    {
+      "segment": "B",
+      "method": "sprite",
+      "dim": "background",
+      "score": 5.0,
+      "comment": "sample_14:No changes, perfect match"
+    },
+    {
+      "segment": "A",
+      "method": "sprite",
+      "dim": "identity",
+      "score": 5.0,
+      "comment": "sample_15:Characters and background identical, no artifacts."
+    },
+    {
+      "segment": "A",
+      "method": "sprite",
+      "dim": "quality",
+      "score": 5.0,
+      "comment": "sample_15:Characters and background identical, no artifacts."
+    },
+    {
+      "segment": "A",
+      "method": "sprite",
+      "dim": "motion",
+      "score": 5.0,
+      "comment": "sample_15:Characters and background identical, no artifacts."
+    },
+    {
+      "segment": "A",
+      "method": "sprite",
+      "dim": "stability",
+      "score": 5.0,
+      "comment": "sample_15:Characters and background identical, no artifacts."
+    },
+    {
+      "segment": "A",
+      "method": "sprite",
+      "dim": "background",
+      "score": 5.0,
+      "comment": "sample_15:Characters and background identical, no artifacts."
+    },
+    {
+      "segment": "A",
+      "method": "palette",
+      "dim": "identity",
+      "score": 5.0,
+      "comment": "sample_16:Character consistent, no artifacts or issues"
+    },
+    {
+      "segment": "A",
+      "method": "palette",
+      "dim": "quality",
+      "score": 5.0,
+      "comment": "sample_16:Character consistent, no artifacts or issues"
+    },
+    {
+      "segment": "A",
+      "method": "palette",
+      "dim": "motion",
+      "score": 5.0,
+      "comment": "sample_16:Character consistent, no artifacts or issues"
+    },
+    {
+      "segment": "A",
+      "method": "palette",
+      "dim": "stability",
+      "score": 5.0,
+      "comment": "sample_16:Character consistent, no artifacts or issues"
+    },
+    {
+      "segment": "A",
+      "method": "palette",
+      "dim": "background",
+      "score": 5.0,
+      "comment": "sample_16:Character consistent, no artifacts or issues"
+    }
+  ]
+}

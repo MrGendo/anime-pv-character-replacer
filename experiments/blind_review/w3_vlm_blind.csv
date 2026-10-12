@@ -1,0 +1,81 @@
+segment,method,dim,score,comment
+B,palette,identity,1,"sample_01:No character, just corrupted text"
+B,palette,quality,1,"sample_01:No character, just corrupted text"
+B,palette,motion,1,"sample_01:No character, just corrupted text"
+B,palette,stability,1,"sample_01:No character, just corrupted text"
+B,palette,background,1,"sample_01:No character, just corrupted text"
+B,palette,identity,5,"sample_02:No changes detected, identical frames"
+B,palette,quality,5,"sample_02:No changes detected, identical frames"
+B,palette,motion,5,"sample_02:No changes detected, identical frames"
+B,palette,stability,5,"sample_02:No changes detected, identical frames"
+B,palette,background,5,"sample_02:No changes detected, identical frames"
+A,palette,identity,5,sample_03:Characters and background identical in both sides
+A,palette,quality,5,sample_03:Characters and background identical in both sides
+A,palette,motion,5,sample_03:Characters and background identical in both sides
+A,palette,stability,5,sample_03:Characters and background identical in both sides
+A,palette,background,5,sample_03:Characters and background identical in both sides
+A,sprite,identity,5,sample_04:Character replacement seamless and natural
+A,sprite,quality,5,sample_04:Character replacement seamless and natural
+A,sprite,motion,5,sample_04:Character replacement seamless and natural
+A,sprite,stability,5,sample_04:Character replacement seamless and natural
+A,sprite,background,5,sample_04:Character replacement seamless and natural
+B,sprite,identity,5,sample_05:Character and background identical in both sides
+B,sprite,quality,5,sample_05:Character and background identical in both sides
+B,sprite,motion,5,sample_05:Character and background identical in both sides
+B,sprite,stability,5,sample_05:Character and background identical in both sides
+B,sprite,background,5,sample_05:Character and background identical in both sides
+B,palette,identity,5,"sample_06:Character and background identical, no artifacts"
+B,palette,quality,5,"sample_06:Character and background identical, no artifacts"
+B,palette,motion,5,"sample_06:Character and background identical, no artifacts"
+B,palette,stability,5,"sample_06:Character and background identical, no artifacts"
+B,palette,background,5,"sample_06:Character and background identical, no artifacts"
+A,sprite,identity,5,sample_07:Character replacement seamless and natural
+A,sprite,quality,5,sample_07:Character replacement seamless and natural
+A,sprite,motion,5,sample_07:Character replacement seamless and natural
+A,sprite,stability,5,sample_07:Character replacement seamless and natural
+A,sprite,background,5,sample_07:Character replacement seamless and natural
+A,sprite,identity,5,sample_08:Character replacement seamless and natural
+A,sprite,quality,5,sample_08:Character replacement seamless and natural
+A,sprite,motion,5,sample_08:Character replacement seamless and natural
+A,sprite,stability,5,sample_08:Character replacement seamless and natural
+A,sprite,background,5,sample_08:Character replacement seamless and natural
+B,palette,identity,5,sample_09:No visible artifacts or distortions.
+B,palette,quality,5,sample_09:No visible artifacts or distortions.
+B,palette,motion,5,sample_09:No visible artifacts or distortions.
+B,palette,stability,5,sample_09:No visible artifacts or distortions.
+B,palette,background,5,sample_09:No visible artifacts or distortions.
+A,palette,identity,5,sample_10:Perfectly consistent anime character
+A,palette,quality,5,sample_10:Perfectly consistent anime character
+A,palette,motion,5,sample_10:Perfectly consistent anime character
+A,palette,stability,5,sample_10:Perfectly consistent anime character
+A,palette,background,5,sample_10:Perfectly consistent anime character
+A,palette,identity,5,"sample_11:Character consistent, no artifacts or distortions"
+A,palette,quality,5,"sample_11:Character consistent, no artifacts or distortions"
+A,palette,motion,5,"sample_11:Character consistent, no artifacts or distortions"
+A,palette,stability,5,"sample_11:Character consistent, no artifacts or distortions"
+A,palette,background,5,"sample_11:Character consistent, no artifacts or distortions"
+B,sprite,identity,5,sample_12:No visible artifacts or changes detected.
+B,sprite,quality,5,sample_12:No visible artifacts or changes detected.
+B,sprite,motion,5,sample_12:No visible artifacts or changes detected.
+B,sprite,stability,5,sample_12:No visible artifacts or changes detected.
+B,sprite,background,5,sample_12:No visible artifacts or changes detected.
+B,sprite,identity,5,sample_13:Character and background identical in both sides
+B,sprite,quality,5,sample_13:Character and background identical in both sides
+B,sprite,motion,5,sample_13:Character and background identical in both sides
+B,sprite,stability,5,sample_13:Character and background identical in both sides
+B,sprite,background,5,sample_13:Character and background identical in both sides
+B,sprite,identity,5,"sample_14:No changes, perfect match"
+B,sprite,quality,5,"sample_14:No changes, perfect match"
+B,sprite,motion,5,"sample_14:No changes, perfect match"
+B,sprite,stability,5,"sample_14:No changes, perfect match"
+B,sprite,background,5,"sample_14:No changes, perfect match"
+A,sprite,identity,5,"sample_15:Characters and background identical, no artifacts."
+A,sprite,quality,5,"sample_15:Characters and background identical, no artifacts."
+A,sprite,motion,5,"sample_15:Characters and background identical, no artifacts."
+A,sprite,stability,5,"sample_15:Characters and background identical, no artifacts."
+A,sprite,background,5,"sample_15:Characters and background identical, no artifacts."
+A,palette,identity,5,"sample_16:Character consistent, no artifacts or issues"
+A,palette,quality,5,"sample_16:Character consistent, no artifacts or issues"
+A,palette,motion,5,"sample_16:Character consistent, no artifacts or issues"
+A,palette,stability,5,"sample_16:Character consistent, no artifacts or issues"
+A,palette,background,5,"sample_16:Character consistent, no artifacts or issues"

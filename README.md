@@ -1,7 +1,7 @@
 # anime-pv-replacer
 
 动画 PV 人物替换管线:PV → 切片段 → 人物定位/跟踪 → 用标准日式人设图替换人物 → 合成导出 → 评估。
-当前进度:**W3(人物替换 sprite/palette 双路径 + VLM 检测 + 合成导出)**。
+当前进度:**W4(自动化评估 + 报告产物生成)**。
 
 ## 目录结构
 
@@ -16,6 +16,7 @@
 ├── docs/
 │   └── plan/            # 任务规划文档
 ├── output/              # 每次 run 的产物:{run_id}/{stage}/ 与日志
+├── experiments/         # 评估报告与盲评材料(eval_{run_id}.json/.md)
 ├── scripts/             # 辅助脚本
 ├── src/anime_pv_replacer/
 │   ├── config.py        # 配置加载(YAML + env 定位 + deep_merge)
@@ -27,7 +28,9 @@
 │   ├── track.py         # CLI 入口(detect / track 两个阶段)
 │   ├── vlm_grounding.py # VLM 人物检测(Qwen3-VL keyframe 策略,W3)
 │   ├── replacement.py   # sprite / palette 双路径合成器(W3)
-│   └── compose.py       # 替换合成导出 CLI(W3)
+│   ├── compose.py       # 替换合成导出 CLI(W3)
+│   ├── evaluation.py    # 五维自动化评估指标(W4)
+│   └── evaluate.py      # 评估 CLI:扫 replace 组合出 JSON+MD 报告(W4)
 └── tests/               # pytest 测试
 ```
 
@@ -127,6 +130,35 @@ uv run python -m anime_pv_replacer.compose --config config/pipeline.yaml --segme
 - 产物落 `output/{run_id}/replace/{SEG}_{method}/`:`frames/` 逐帧 jpg、
   `final.mp4`(crf/preset 取 config export 段)、`compare_viz/` 每 15 帧一张
   「原帧|替换帧」对比图、`replace_summary.json`(帧数/耗时/轨迹/人设等)。
+
+## 替换质量评估(W4)
+
+对某个 run 目录下全部 `replace/{SEG}_{method}/` 组合跑五维自动化评估,出
+`experiments/eval_{run_id}.json` + `.md`(人读表格:指标原始值/映射分/加权总分,
+两片段并排;含跨片段泛化明细与成本记录表尾):
+
+```bash
+uv run python -m anime_pv_replacer.evaluate --config config/pipeline.yaml --run-dir output/{run_id}
+```
+
+- 指标(evaluat**ion**.py,纯 numpy/opencv 不引 torch):人物身份一致性(CLIP
+  不可用时的降级近似:LAB 直方图相关性 + 主色板余弦)、画面质量(Laplacian
+  方差清晰度 + 替换前后 SSIM 结构保留)、动作一致性(bbox 区域光流幅值序列相关)、
+  时序稳定性(闪烁比,1.0=与原视频一致)、背景保真度(bbox 外逐像素相等率 +
+  边缘带 SSIM)。输入不合法返回 None 记 warning,不中断整轮。
+- 计分:分段线性映射(0→0 / 0.5→60 / 0.75→80 / 1.0→100,时序按 |1-比| 反向),
+  权重按 `docs/EVALUATION_DESIGN.md`(25/15/20/20/10/10);原始帧重解码为
+  JPEG q90 与 W3 逐帧产物同编码比较。
+- W3 的四组合分属 4 个 run 目录时,先聚合再评(符号链接即可,不复制帧):
+
+```bash
+mkdir -p output/w3_eval/replace
+ln -s ../../{W3的run_id}/replace/A_sprite output/w3_eval/replace/A_sprite   # 其余组合同理
+uv run python -m anime_pv_replacer.evaluate --config config/pipeline.yaml --run-dir output/w3_eval
+```
+
+- 盲评 CSV 可选并入(`--blind`),columns 固定 `segment,method,dim,score,comment`,
+  1-5 分;在 md 里单独一节(汇总均分 + 逐行明细),不混入自动分。
 
 ## 测试
 

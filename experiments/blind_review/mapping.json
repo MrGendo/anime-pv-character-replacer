@@ -1,0 +1,82 @@
+[
+ {
+  "blind_id": "sample_01",
+  "truth": "B_palette",
+  "src": "output/20261012_191643/replace/B_palette/compare_viz/000000.jpg"
+ },
+ {
+  "blind_id": "sample_02",
+  "truth": "B_palette",
+  "src": "output/20261012_191643/replace/B_palette/compare_viz/000030.jpg"
+ },
+ {
+  "blind_id": "sample_03",
+  "truth": "A_palette",
+  "src": "output/20261012_191632/replace/A_palette/compare_viz/000000.jpg"
+ },
+ {
+  "blind_id": "sample_04",
+  "truth": "A_sprite",
+  "src": "output/20261012_191630/replace/A_sprite/compare_viz/000105.jpg"
+ },
+ {
+  "blind_id": "sample_05",
+  "truth": "B_sprite",
+  "src": "output/20261012_191639/replace/B_sprite/compare_viz/000090.jpg"
+ },
+ {
+  "blind_id": "sample_06",
+  "truth": "B_palette",
+  "src": "output/20261012_191643/replace/B_palette/compare_viz/000120.jpg"
+ },
+ {
+  "blind_id": "sample_07",
+  "truth": "A_sprite",
+  "src": "output/20261012_191630/replace/A_sprite/compare_viz/000090.jpg"
+ },
+ {
+  "blind_id": "sample_08",
+  "truth": "A_sprite",
+  "src": "output/20261012_191630/replace/A_sprite/compare_viz/000120.jpg"
+ },
+ {
+  "blind_id": "sample_09",
+  "truth": "B_palette",
+  "src": "output/20261012_191643/replace/B_palette/compare_viz/000045.jpg"
+ },
+ {
+  "blind_id": "sample_10",
+  "truth": "A_palette",
+  "src": "output/20261012_191632/replace/A_palette/compare_viz/000060.jpg"
+ },
+ {
+  "blind_id": "sample_11",
+  "truth": "A_palette",
+  "src": "output/20261012_191632/replace/A_palette/compare_viz/000120.jpg"
+ },
+ {
+  "blind_id": "sample_12",
+  "truth": "B_sprite",
+  "src": "output/20261012_191639/replace/B_sprite/compare_viz/000045.jpg"
+ },
+ {
+  "blind_id": "sample_13",
+  "truth": "B_sprite",
+  "src": "output/20261012_191639/replace/B_sprite/compare_viz/000150.jpg"
+ },
+ {
+  "blind_id": "sample_14",
+  "truth": "B_sprite",
+  "src": "output/20261012_191639/replace/B_sprite/compare_viz/000015.jpg"
+ },
+ {
+  "blind_id": "sample_15",
+  "truth": "A_sprite",
+  "src": "output/20261012_191630/replace/A_sprite/compare_viz/000000.jpg"
+ },
+ {
+  "blind_id": "sample_16",
+  "truth": "A_palette",
+  "src": "output/20261012_191632/replace/A_palette/compare_viz/000090.jpg"
+ }
+]
