@@ -1,0 +1,22 @@
+{
+  "segment": "B",
+  "method": "palette",
+  "run_id": "20261012_190717",
+  "track_id": 8,
+  "track_frames": [
+    167,
+    204
+  ],
+  "chara_sheet": "assets/character_sheets/chara_jun_sheet.png",
+  "tracks_source": "output/20261012_184421/tracking/B/tracks.json",
+  "n_frames": 225,
+  "n_replaced_frames": 38,
+  "avg_replace_ms": 145.77,
+  "max_replace_ms": 193.62,
+  "total_s": 8.46,
+  "final_mp4": "output/20261012_190717/replace/B_palette/final.mp4",
+  "final_mp4_bytes": 7809873,
+  "frames_dir": "output/20261012_190717/replace/B_palette/frames",
+  "compare_viz_dir": "output/20261012_190717/replace/B_palette/compare_viz",
+  "width_stabilized_pulled": 0
+}

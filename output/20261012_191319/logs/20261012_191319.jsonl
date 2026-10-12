@@ -1,0 +1,2 @@
+{"ts": "2026-10-12T19:13:19.162", "run_id": "20261012_191319", "stage": "vlm-B", "event": "vlm.start", "data": {"segment": "B", "video": "assets/segments/B.mp4", "model": "Qwen/Qwen3-VL-8B-Instruct", "grounding_interval": 5, "n_frames": 233}}
+{"ts": "2026-10-12T19:16:05.340", "run_id": "20261012_191319", "stage": "vlm-B", "event": "vlm.done", "data": {"segment": "B", "n_frames": 225, "n_keyframes": 45, "avg_vlm_ms": 3683.07, "person_count_hist": {"0": 64, "1": 161}, "detections_json": "output/20261012_191319/detection/B/detections.json"}}

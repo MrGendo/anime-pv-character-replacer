@@ -13,11 +13,19 @@
 ## 交付文件清单
 - src/anime_pv_replacer/replacement.py（sprite 与 palette 两类合成器）
 - src/anime_pv_replacer/compose.py（CLI：--config --segment {A,B} --method {sprite,palette} [--track-id N] [--chara-sheet path]）
+- src/anime_pv_replacer/vlm_grounding.py（VLM 人物检测：替代/补充 yolon，动画域）
 - tests/test_replacement.py
 - README.md（追加替换/合成用法）
 - config/pipeline.yaml / example（replacement 段更新为三路径：sprite/palette/api_doc，api_doc 保持「未授权未运行」标注）
 
 ## 契约条款
+0. vlm_grounding.py（W2 遗留问题的修复，优先实现）：
+   - 背景：yolon(COCO) 对动画远景检出率仅 11%，A 段几乎不可用。已实测 Qwen/Qwen3-VL-8B-Instruct (SiliconFlow chat completions, base64 data url) 能对动画帧输出人物 bbox。
+   - 类 `VLMGroundingDetector`：`__init__(api_key_env="SILICONFLOW_API_KEY", model="Qwen/Qwen3-VL-8B-Instruct", base_url="https://api.siliconflow.cn/v1", confidence_note)`；`detect(frame_bgr) -> [{"bbox":[x1,y1,x2,y2],"score":1.0,"source":"vlm"}]`
+   - prompt 固定为（已实测可行）：`Locate anime characters. Output ONLY JSON array [{"bbox_2d":[x1,y1,x2,y2],"desc":"<8 words>"}] in the ORIGINAL image pixel coordinates. Frame out unclear/effect regions. If none, output [].`（temperature=0）
+   - 解析：剥 ```json 围栏、strip <think>；解析失败重试 1 次后返回 [] 并 warning
+   - **逐帧太贵**：实现 keyframe 策略——每 `grounding_interval`（config detection 段新增，默认 5）帧调一次 VLM，中间帧用 SimpleTracker 或线性插值 bbox 补；VLM 无 key 时人话提示并退出码 2
+   - 注意 urllib 走 ProxyHandler({}) 绕系统代理直连；httpx 已在 deps
 1. replacement.py：
    - `extract_sprite(sheet_path, view="front") -> (sprite_rgba, meta)`：白底转 alpha（阈值+羽化），三视图取正面那一格（按 1/3 宽度切分，meta 记录切分区域）
    - 类 `SpriteReplacer`：`__init__(chara_sheet, edge_blend_px, feather_sigma)`；`replace(frame_bgr, bbox) -> frame_bgr`：sprite 按 bbox 高度缩放（宽按比例，若宽超 bbox 1.6x 则钳制），脚部对齐 bbox 底边中心，alpha 羽化贴入；**bbox 外像素严格不动**（背景保真度依赖此条）

@@ -1,0 +1,2 @@
+{"ts": "2026-10-12T19:16:15.920", "run_id": "20261012_191615", "stage": "track-A", "event": "track.read_detections", "data": {"segment": "A", "source": "output/20261012_191127/detection/A/detections.json", "n_frames": 127, "method": "vlm"}}
+{"ts": "2026-10-12T19:16:16.074", "run_id": "20261012_191615", "stage": "track-A", "event": "track.done", "data": {"segment": "A", "n_tracks": 3, "longest_track_frames": 66, "tracks_json": "output/20261012_191615/tracking/A/tracks.json", "n_viz": 13, "viz_dir": "output/20261012_191615/tracking/A/tracks_viz"}}

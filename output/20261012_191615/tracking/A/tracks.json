@@ -1,0 +1,1927 @@
+{
+  "segment": "A",
+  "detection_source": "output/20261012_191127/detection/A/detections.json",
+  "config": {
+    "iou_threshold": 0.3,
+    "max_gap_frames": 8,
+    "smoothing_window": 7
+  },
+  "n_frames": 127,
+  "n_tracks": 3,
+  "longest_track_frames": 66,
+  "tracks": [
+    {
+      "track_id": 1,
+      "frame_start": 0,
+      "frame_end": 52,
+      "frames": [
+        {
+          "frame_idx": 0,
+          "bbox": [
+            199.0,
+            405.0,
+            422.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 1,
+          "bbox": [
+            199.0,
+            405.0,
+            422.1,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 2,
+          "bbox": [
+            199.0,
+            405.0,
+            422.2,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 3,
+          "bbox": [
+            199.0,
+            405.0,
+            422.3,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 4,
+          "bbox": [
+            199.0,
+            405.0,
+            422.4,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 5,
+          "bbox": [
+            199.0,
+            405.0,
+            422.5,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 6,
+          "bbox": [
+            199.1,
+            404.7,
+            422.7,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 7,
+          "bbox": [
+            199.3,
+            404.2,
+            423.1,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 8,
+          "bbox": [
+            199.7,
+            403.5,
+            423.5,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 9,
+          "bbox": [
+            200.1,
+            402.4,
+            424.1,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 10,
+          "bbox": [
+            200.7,
+            401.1,
+            424.7,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 11,
+          "bbox": [
+            201.4,
+            399.1,
+            425.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 12,
+          "bbox": [
+            202.3,
+            396.2,
+            425.1,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 13,
+          "bbox": [
+            203.2,
+            392.7,
+            424.8,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 14,
+          "bbox": [
+            204.1,
+            388.8,
+            424.1,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 15,
+          "bbox": [
+            205.0,
+            384.3,
+            423.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 16,
+          "bbox": [
+            205.9,
+            379.9,
+            422.1,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 17,
+          "bbox": [
+            206.7,
+            375.7,
+            421.3,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 18,
+          "bbox": [
+            207.3,
+            372.3,
+            420.9,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 19,
+          "bbox": [
+            207.9,
+            369.5,
+            421.1,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 20,
+          "bbox": [
+            208.3,
+            367.5,
+            421.7,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 21,
+          "bbox": [
+            208.7,
+            364.3,
+            423.2,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 22,
+          "bbox": [
+            209.1,
+            359.9,
+            425.6,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 23,
+          "bbox": [
+            209.7,
+            353.5,
+            428.4,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 24,
+          "bbox": [
+            210.3,
+            345.3,
+            431.6,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 25,
+          "bbox": [
+            211.1,
+            335.1,
+            435.2,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 26,
+          "bbox": [
+            212.1,
+            321.3,
+            439.1,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 27,
+          "bbox": [
+            213.3,
+            303.8,
+            443.3,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 28,
+          "bbox": [
+            214.5,
+            284.5,
+            447.5,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 29,
+          "bbox": [
+            215.9,
+            263.6,
+            451.5,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 30,
+          "bbox": [
+            217.3,
+            240.9,
+            455.5,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 31,
+          "bbox": [
+            218.7,
+            218.3,
+            459.1,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 32,
+          "bbox": [
+            220.1,
+            195.8,
+            462.2,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 33,
+          "bbox": [
+            221.5,
+            175.1,
+            464.9,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 34,
+          "bbox": [
+            222.7,
+            156.4,
+            467.4,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 35,
+          "bbox": [
+            223.9,
+            139.5,
+            469.5,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 36,
+          "bbox": [
+            224.9,
+            125.0,
+            470.4,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 37,
+          "bbox": [
+            225.7,
+            112.9,
+            470.1,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 38,
+          "bbox": [
+            226.3,
+            101.4,
+            469.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 39,
+          "bbox": [
+            226.9,
+            90.5,
+            467.1,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 40,
+          "bbox": [
+            227.3,
+            80.2,
+            464.4,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 41,
+          "bbox": [
+            227.6,
+            71.7,
+            461.4,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 42,
+          "bbox": [
+            227.7,
+            65.1,
+            458.3,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 43,
+          "bbox": [
+            227.8,
+            59.9,
+            455.8,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 44,
+          "bbox": [
+            227.9,
+            55.9,
+            453.9,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 45,
+          "bbox": [
+            227.9,
+            55.9,
+            453.9,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 46,
+          "bbox": [
+            227.9,
+            55.9,
+            453.9,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 47,
+          "bbox": [
+            227.9,
+            55.9,
+            453.9,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 48,
+          "bbox": [
+            227.9,
+            55.9,
+            453.9,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 49,
+          "bbox": [
+            227.9,
+            55.9,
+            453.9,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 50,
+          "bbox": [
+            227.9,
+            55.9,
+            453.9,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 51,
+          "bbox": [
+            227.9,
+            55.9,
+            453.9,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 52,
+          "bbox": [
+            227.9,
+            55.9,
+            453.9,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "LOST"
+        }
+      ]
+    },
+    {
+      "track_id": 2,
+      "frame_start": 0,
+      "frame_end": 52,
+      "frames": [
+        {
+          "frame_idx": 0,
+          "bbox": [
+            612.0,
+            558.0,
+            793.0,
+            908.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 1,
+          "bbox": [
+            612.0,
+            558.0,
+            793.4,
+            911.4
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 2,
+          "bbox": [
+            612.0,
+            558.0,
+            793.8,
+            914.8
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 3,
+          "bbox": [
+            612.0,
+            558.0,
+            794.2,
+            918.2
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 4,
+          "bbox": [
+            612.0,
+            558.0,
+            794.6,
+            921.6
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 5,
+          "bbox": [
+            612.0,
+            558.0,
+            795.0,
+            925.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 6,
+          "bbox": [
+            612.0,
+            558.0,
+            795.3,
+            929.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 7,
+          "bbox": [
+            612.1,
+            557.9,
+            795.9,
+            937.1
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 8,
+          "bbox": [
+            612.2,
+            557.8,
+            796.5,
+            945.8
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 9,
+          "bbox": [
+            612.3,
+            557.7,
+            796.9,
+            955.1
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 10,
+          "bbox": [
+            612.4,
+            557.6,
+            797.3,
+            965.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 11,
+          "bbox": [
+            612.5,
+            557.4,
+            797.6,
+            974.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 12,
+          "bbox": [
+            612.6,
+            557.3,
+            797.7,
+            982.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 13,
+          "bbox": [
+            612.7,
+            557.2,
+            797.8,
+            988.4
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 14,
+          "bbox": [
+            612.6,
+            557.1,
+            797.9,
+            993.2
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 15,
+          "bbox": [
+            612.5,
+            557.0,
+            798.0,
+            996.4
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 16,
+          "bbox": [
+            612.3,
+            557.0,
+            798.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 17,
+          "bbox": [
+            611.8,
+            557.0,
+            798.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 18,
+          "bbox": [
+            611.1,
+            557.0,
+            798.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 19,
+          "bbox": [
+            610.4,
+            557.0,
+            798.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 20,
+          "bbox": [
+            609.5,
+            557.0,
+            798.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 21,
+          "bbox": [
+            608.5,
+            557.0,
+            798.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 22,
+          "bbox": [
+            607.4,
+            557.0,
+            798.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 23,
+          "bbox": [
+            606.3,
+            557.0,
+            798.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 24,
+          "bbox": [
+            605.4,
+            557.0,
+            798.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 25,
+          "bbox": [
+            604.5,
+            557.0,
+            798.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 26,
+          "bbox": [
+            603.6,
+            556.9,
+            798.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 27,
+          "bbox": [
+            602.7,
+            556.7,
+            798.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 28,
+          "bbox": [
+            601.8,
+            556.3,
+            798.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 29,
+          "bbox": [
+            600.9,
+            555.9,
+            798.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 30,
+          "bbox": [
+            600.0,
+            555.3,
+            798.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 31,
+          "bbox": [
+            599.1,
+            554.7,
+            798.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 32,
+          "bbox": [
+            598.3,
+            554.1,
+            797.9,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 33,
+          "bbox": [
+            597.7,
+            553.5,
+            797.8,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 34,
+          "bbox": [
+            597.1,
+            553.1,
+            797.7,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 35,
+          "bbox": [
+            596.7,
+            552.7,
+            797.6,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 36,
+          "bbox": [
+            596.5,
+            552.4,
+            797.5,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 37,
+          "bbox": [
+            596.4,
+            552.1,
+            797.4,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 38,
+          "bbox": [
+            596.3,
+            551.8,
+            797.3,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 39,
+          "bbox": [
+            596.4,
+            551.5,
+            797.4,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 40,
+          "bbox": [
+            596.5,
+            551.2,
+            797.5,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 41,
+          "bbox": [
+            596.6,
+            550.9,
+            797.6,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 42,
+          "bbox": [
+            596.7,
+            550.6,
+            797.7,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 43,
+          "bbox": [
+            596.8,
+            550.3,
+            797.8,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 44,
+          "bbox": [
+            596.9,
+            550.2,
+            797.9,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 45,
+          "bbox": [
+            596.9,
+            550.2,
+            797.9,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 46,
+          "bbox": [
+            596.9,
+            550.2,
+            797.9,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 47,
+          "bbox": [
+            596.9,
+            550.2,
+            797.9,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 48,
+          "bbox": [
+            596.9,
+            550.2,
+            797.9,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 49,
+          "bbox": [
+            596.9,
+            550.2,
+            797.9,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 50,
+          "bbox": [
+            596.9,
+            550.2,
+            797.9,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 51,
+          "bbox": [
+            596.9,
+            550.2,
+            797.9,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 52,
+          "bbox": [
+            596.9,
+            550.2,
+            797.9,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "LOST"
+        }
+      ]
+    },
+    {
+      "track_id": 3,
+      "frame_start": 61,
+      "frame_end": 126,
+      "frames": [
+        {
+          "frame_idx": 61,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 62,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 63,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 64,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 65,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 66,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 67,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 68,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 69,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 70,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 71,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.1
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 72,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.2
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 73,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.3
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 74,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.6
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 75,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.9
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 76,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            999.1
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 77,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            999.4
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 78,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            999.7
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 79,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            999.8
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 80,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            999.9
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 81,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            1000.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 82,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            1000.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 83,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            1000.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 84,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            1000.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 85,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            1000.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 86,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            999.9
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 87,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            999.8
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 88,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            999.7
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 89,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            999.4
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 90,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            999.1
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 91,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.9
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 92,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.6
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 93,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.3
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 94,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.2
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 95,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.1
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 96,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 97,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 98,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 99,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 100,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 101,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 102,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 103,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 104,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 105,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 106,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.0
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 107,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.1
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 108,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.2
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 109,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.3
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 110,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.4
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 111,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.5
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 112,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.6
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 113,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.7
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 114,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.6
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 115,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.5
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 116,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.5
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 117,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.4
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 118,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.3
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 119,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.4
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 120,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.5
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 121,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.6
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 122,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.7
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 123,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.8
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 124,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.9
+          ],
+          "score": 1.0,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 125,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.9
+          ],
+          "score": 1.0,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 126,
+          "bbox": [
+            0.0,
+            0.0,
+            998.0,
+            998.9
+          ],
+          "score": 1.0,
+          "state": "LOST"
+        }
+      ]
+    }
+  ]
+}

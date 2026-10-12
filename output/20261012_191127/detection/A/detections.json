@@ -1,0 +1,21 @@
+{
+  "segment": "A",
+  "source": "assets/segments/A.mp4",
+  "run_id": "20261012_191127",
+  "method": "vlm",
+  "model": "Qwen/Qwen3-VL-8B-Instruct",
+  "confidence_note": "VLM 不返回置信度,score 固定 1.0,过滤交给跟踪平滑",
+  "grounding_interval": 5,
+  "fps": 23.976024,
+  "width": 1920,
+  "height": 1080,
+  "n_frames": 127,
+  "n_keyframes": 26,
+  "avg_vlm_ms": 4281.03,
+  "max_vlm_ms": 10763.06,
+  "person_count_hist": {
+    "2": 45,
+    "0": 18,
+    "1": 64
+  }
+}

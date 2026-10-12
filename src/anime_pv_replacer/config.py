@@ -39,9 +39,14 @@ DEFAULT_CONFIG: dict[str, Any] = {
         "score_thresh": 0.35,
         "device": "cpu",
         "max_persons": 4,
+        "frame_stride": 1,
+        # W3:VLM 人物检测的 keyframe 间隔(vlm_grounding 用)
+        "grounding_interval": 5,
     },
     "replacement": {
-        "method": "stylization",
+        # W3 三路径:sprite / palette / api_doc(默认本地 sprite,零成本)
+        "method": "sprite",
+        "chara_sheet": "assets/character_sheets/chara_aoi_sheet.png",
         "api": {
             "endpoint": "",
             "key_env": "ARK_API_KEY",

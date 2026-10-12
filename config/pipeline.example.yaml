@@ -50,11 +50,22 @@ detection:
   # 检测帧步长:每 N 帧真实推理一次,跳过帧按相邻两次检测线性插值。
   # CPU 预算 ~150ms/帧;超预算时调大(如 2),代价是中间帧 bbox 为近似值
   frame_stride: 1
+  # VLM 人物检测(vlm_grounding)的 keyframe 间隔:每 N 帧真实请求一次 VLM
+  # (SiliconFlow Qwen3-VL,需设 SILICONFLOW_API_KEY),中间帧线性插值 bbox。
+  # 调小更准更贵,调大更省更糊;yolon 对动画远景检出率低时用它补/替
+  grounding_interval: 5
 
 # 人物替换(W3 波次生效)
 replacement:
-  # 替换方法:stylization = 风格化 API 把人设图迁移到目标区域
-  method: stylization
+  # 替换方法三路径:
+  #   sprite  = 人设图白底抠像,按 bbox 缩放贴入(本地 CPU,零成本)
+  #   palette = bbox 区域向人设色板做 LAB 颜色迁移(本地 CPU,零成本)
+  #   api_doc = 付费风格化 API(未授权未运行:未设 key 时 compose 退出码 2,
+  #             设了也只打印将要调用的 endpoint/参数,不真实调用)
+  method: sprite
+  # 默认人设图(1440x720 三视图,白底;compose --chara-sheet 可按片段覆盖)
+  chara_sheet: assets/character_sheets/chara_aoi_sheet.png
+  # api_doc 路径参数(仅该路径使用)
   api:
     # 风格化服务 endpoint(本机服务直连,Python 内不走系统代理)
     endpoint: "http://localhost:8000/v1/stylize"
@@ -66,9 +77,8 @@ replacement:
     retries: 3
     # 单次请求超时(秒)
     timeout_s: 30
-  # 边缘融合宽度(像素):替换区域与原画过渡带
+  # sprite 路径参数:边缘羽化的核宽(像素)与高斯 sigma
   edge_blend_px: 12
-  # 过渡带羽化高斯 sigma
   feather_sigma: 8
 
 # 目标跟踪(W2 波次生效)
