@@ -1,0 +1,230 @@
+[
+ {
+  "frame_idx": 1,
+  "t_sec": 2.0,
+  "image": "m_01.jpg",
+  "raw": "people: 1\nshot: boy peeking from door\nmotion: static\nnotes: brown hair, purple eyes, red scarf, dark clothing"
+ },
+ {
+  "frame_idx": 2,
+  "t_sec": 4.0,
+  "image": "m_02.jpg",
+  "raw": "people: 1\nshot: close-up girl\nmotion: static\nnotes: blonde hair, green eyes, light teal dress, white arm sleeves"
+ },
+ {
+  "frame_idx": 3,
+  "t_sec": 6.0,
+  "image": "m_03.jpg",
+  "raw": "people: 1\nshot: character intro card\nmotion: static\nnotes: blonde hair, green eyes, white dress with blue flowers, green bow"
+ },
+ {
+  "frame_idx": 4,
+  "t_sec": 8.0,
+  "image": "m_04.jpg",
+  "raw": "people: 1\nshot: close-up girl\nmotion: static\nnotes: blonde hair, green eyes, grey outfit, green accents"
+ },
+ {
+  "frame_idx": 5,
+  "t_sec": 10.0,
+  "image": "m_05.jpg",
+  "raw": "people: 1\nshot: close-up girl\nmotion: static\nnotes: blonde hair, white clothing, teal feather earring"
+ },
+ {
+  "frame_idx": 6,
+  "t_sec": 12.0,
+  "image": "m_06.jpg",
+  "raw": "people: 1\nshot: close-up girl\nmotion: static\nnotes: blonde hair, green eyes, white dress with blue flowers, green bow"
+ },
+ {
+  "frame_idx": 7,
+  "t_sec": 14.0,
+  "image": "m_07.jpg",
+  "raw": "people: 1\nshot: action\nmotion: action\nnotes: dark blue hair, white top, black obi; holding red staff; forest background; text overlay with name and voice actor."
+ },
+ {
+  "frame_idx": 8,
+  "t_sec": 16.0,
+  "image": "m_08.jpg",
+  "raw": "people: 0\nshot: text overlay on rainy forest background\nmotion: static\nnotes: blurred figure in white, rain streaks, green foliage, blue UI border, Japanese text identifying character and voice actor"
+ },
+ {
+  "frame_idx": 9,
+  "t_sec": 18.0,
+  "image": "m_09.jpg",
+  "raw": "people: 1\nshot: close-up girl\nmotion: static\nnotes: dark blue hair, red eyes, white outfit"
+ },
+ {
+  "frame_idx": 10,
+  "t_sec": 20.0,
+  "image": "m_10.jpg",
+  "raw": "people: 2\nshot: close-up girl\nmotion: static\nnotes: grey hair, red eyes, white top; other character: red clothing, dark hair"
+ },
+ {
+  "frame_idx": 11,
+  "t_sec": 22.0,
+  "image": "m_11.jpg",
+  "raw": "people: 1\nshot: close-up girl\nmotion: static\nnotes: dark blue hair, red eyes, white robe, holding red staff. Background: ruined stone room."
+ },
+ {
+  "frame_idx": 12,
+  "t_sec": 24.0,
+  "image": "m_12.jpg",
+  "raw": "people: 1\nshot: close-up girl\nmotion: static\nnotes: white hair, purple eyes, black collar, pink accents"
+ },
+ {
+  "frame_idx": 13,
+  "t_sec": 26.0,
+  "image": "m_13.jpg",
+  "raw": "people: 1\nshot: close-up girl\nmotion: static\nnotes: white hair, purple eyes, black collar, pink accents"
+ },
+ {
+  "frame_idx": 14,
+  "t_sec": 28.0,
+  "image": "m_14.jpg",
+  "raw": "people: 0\nshot: text overlay on shoes\nmotion: static\nnotes: purple UI frame, grey shoes on stone ground, Japanese text \"ななみ\" and \"cv. M·A·O\" visible"
+ },
+ {
+  "frame_idx": 15,
+  "t_sec": 30.0,
+  "image": "m_15.jpg",
+  "raw": "people: 1\nshot: character portrait with text overlay\nmotion: static\nnotes: white hair, black-and-white maid outfit with red bow"
+ },
+ {
+  "frame_idx": 16,
+  "t_sec": 32.0,
+  "image": "m_16.jpg",
+  "raw": "people: 1\nshot: close-up girl\nmotion: static\nnotes: white hair, purple eyes, white gloves, black collar; green forest background"
+ },
+ {
+  "frame_idx": 17,
+  "t_sec": 34.0,
+  "image": "m_17.jpg",
+  "raw": "people: 4\nshot: close-up girl\nmotion: static\nnotes: blonde hair, white hat, purple sunglasses, white floral top, feather earring; background pedestrians in urban street."
+ },
+ {
+  "frame_idx": 18,
+  "t_sec": 36.0,
+  "image": "m_18.jpg",
+  "raw": "people: 1\nshot: close-up girl holding purple cloth\nmotion: static\nnotes: silver hair, purple eyes, white gloves, black outfit with red bow"
+ },
+ {
+  "frame_idx": 19,
+  "t_sec": 38.0,
+  "image": "m_19.jpg",
+  "raw": "people: 1\nshot: close-up girl\nmotion: static\nnotes: gray hair, white outfit, pink eyes"
+ },
+ {
+  "frame_idx": 20,
+  "t_sec": 40.0,
+  "image": "m_20.jpg",
+  "raw": "people: 1\nshot: close-up girl\nmotion: static\nnotes: white hair, white bow, dark collar; warm golden background light"
+ },
+ {
+  "frame_idx": 21,
+  "t_sec": 42.0,
+  "image": "m_21.jpg",
+  "raw": "people: 2\nshot: back view of cloaked figure facing glowing circle, blonde girl beside him\nmotion: static\nnotes: dark hair, red cloak; blonde hair, green dress"
+ },
+ {
+  "frame_idx": 22,
+  "t_sec": 44.0,
+  "image": "m_22.jpg",
+  "raw": "people: 1\nshot: close-up face\nmotion: static\nnotes: gray hair, blue eyes, red cloak"
+ },
+ {
+  "frame_idx": 23,
+  "t_sec": 46.0,
+  "image": "m_23.jpg",
+  "raw": "people: 0\nshot: text\nmotion: static\nnotes: Glitchy red digital text overlay on dark background. Japanese characters visible. No characters or clothing/hair colors present."
+ },
+ {
+  "frame_idx": 24,
+  "t_sec": 48.0,
+  "image": "m_24.jpg",
+  "raw": "people: 0\nshot: text\nmotion: static\nnotes: fiery red glowing Japanese text on dark background with floating embers and lens flare."
+ },
+ {
+  "frame_idx": 25,
+  "t_sec": 50.0,
+  "image": "m_25.jpg",
+  "raw": "people: 0\nshot: text\nmotion: static\nnotes: fiery red background, glowing Japanese text \"この世界で最強になる\" (Become the strongest in this world), sparks, dramatic lighting."
+ },
+ {
+  "frame_idx": 26,
+  "t_sec": 52.0,
+  "image": "m_26.jpg",
+  "raw": "people: 1\nshot: action\nmotion: action\nnotes: white hoodie, dark pants, glowing green/red energy aura, rocky terrain, blue sky"
+ },
+ {
+  "frame_idx": 27,
+  "t_sec": 54.0,
+  "image": "t_01.jpg",
+  "raw": "people: 1\nshot: character with glowing red fists\nmotion: action\nnotes: black jacket, white shirt, dark pants; glowing red energy fists and scarf"
+ },
+ {
+  "frame_idx": 28,
+  "t_sec": 56.0,
+  "image": "t_02.jpg",
+  "raw": "people: 0\nshot: abstract neon explosion\nmotion: static\nnotes: vibrant pink/magenta neon lights, glowing geometric shapes, digital glitch effects, no characters visible"
+ },
+ {
+  "frame_idx": 29,
+  "t_sec": 58.0,
+  "image": "t_03.jpg",
+  "raw": "people: 0\nshot: text\nmotion: static\nnotes: glowing pink star, sparkling purple background, Japanese text overlay — no characters visible."
+ },
+ {
+  "frame_idx": 30,
+  "t_sec": 60.0,
+  "image": "t_04.jpg",
+  "raw": "people: 0\nshot: text\nmotion: static\nnotes: cosmic blue background with sparkling shards, pink star, Japanese title \"マジカルエクスプローラー\" in white."
+ },
+ {
+  "frame_idx": 31,
+  "t_sec": 62.0,
+  "image": "t_05.jpg",
+  "raw": "people: 0\nshot: text\nmotion: static\nnotes: cosmic background with glowing particles, pink star, Japanese and English title \"Magical Explorer\""
+ },
+ {
+  "frame_idx": 32,
+  "t_sec": 64.0,
+  "image": "t_06.jpg",
+  "raw": "people: 0\nshot: text\nmotion: static\nnotes: cosmic blue background, pink star, Japanese/English title, sparkling particles, no characters visible"
+ },
+ {
+  "frame_idx": 33,
+  "t_sec": 66.0,
+  "image": "t_07.jpg",
+  "raw": "people: 0\nshot: text\nmotion: static\nnotes: cosmic blue background with sparkling particles, pink star, white Japanese and English text reading \"MAGICAL EXPLORER\""
+ },
+ {
+  "frame_idx": 34,
+  "t_sec": 68.0,
+  "image": "t_08.jpg",
+  "raw": "people: 4\nshot: promotional poster with text\nmotion: static\nnotes: purple, blonde, white hair; red cape, white/grey outfits; dark urban background"
+ },
+ {
+  "frame_idx": 35,
+  "t_sec": 70.0,
+  "image": "t_09.jpg",
+  "raw": "people: 4\nshot: promotional poster with characters and text\nmotion: static\nnotes: purple, blonde, white hair; white, grey, red clothing; dramatic pose; \"2026 October TV anime start!\" text"
+ },
+ {
+  "frame_idx": 36,
+  "t_sec": 72.0,
+  "image": "t_10.jpg",
+  "raw": "people: 4\nshot: text-heavy promotional poster\nmotion: static\nnotes: purple, blonde, white hair; red cape; dark uniforms; neon-lit urban background"
+ },
+ {
+  "frame_idx": 37,
+  "t_sec": 74.0,
+  "image": "t_11.jpg",
+  "raw": "people: 4\nshot: promotional poster with characters and text\nmotion: static\nnotes: purple, blonde, white hair; white, red, grey clothing; dramatic pose; \"2026 October TV anime start!\" text"
+ },
+ {
+  "frame_idx": 38,
+  "t_sec": 76.0,
+  "image": "t_12.jpg",
+  "raw": "people: 1\nshot: close-up girl\nmotion: static\nnotes: white hair, purple eyes, white maid outfit with red bow, forest background"
+ }
+]

@@ -39,12 +39,17 @@ paths:
 detection:
   # 检测后端:固定 yolon(面向动画人物的 YOLO 变体)
   method: yolon
-  # 检出置信度阈值,低于此分的目标丢弃
-  score_thresh: 0.35
+  # 检出置信度阈值,低于此分的目标丢弃。
+  # 注意:yolov8n 是 COCO 照片域模型,动画画面置信度整体偏低,
+  # 远景/线稿风格片段建议 0.15 左右,近景真人感画面 0.35 即可
+  score_thresh: 0.15
   # 推理设备:本机无 GPU,固定 cpu
   device: cpu
   # 单帧最多保留的人物数,超出按置信度取 top-K
   max_persons: 4
+  # 检测帧步长:每 N 帧真实推理一次,跳过帧按相邻两次检测线性插值。
+  # CPU 预算 ~150ms/帧;超预算时调大(如 2),代价是中间帧 bbox 为近似值
+  frame_stride: 1
 
 # 人物替换(W3 波次生效)
 replacement:
@@ -68,10 +73,12 @@ replacement:
 
 # 目标跟踪(W2 波次生效)
 tracking:
-  # 轨迹平滑窗口(帧):奇数,中值/均值滤波用
+  # 轨迹平滑窗口(帧):bbox 滑动均值滤波的窗口长度
   smoothing_window: 7
-  # 检测丢目标后允许的最大空缺帧数,超过则断轨
+  # 检测丢目标后允许的最大空缺帧数,超过则断轨(重现也不再续原 ID)
   max_gap_frames: 8
+  # 帧间 IoU 匹配阈值:上一帧轨迹与当前检测的 IoU 低于此值视为不同目标
+  iou_threshold: 0.3
 
 # 导出编码(重编码路径的参数)
 export:

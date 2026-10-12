@@ -8,16 +8,16 @@ source:
   video_url: ""
   license_note: "マジカル★エクスプローラー 第1弾PV(仅本地研究用)"
 
-# 切片段定义(单位:秒)。当前为占位时间,时间以镜头扫描结果为准。
+# 切片段定义(单位:秒)。基于 VLM 帧扫描 + 镜头边界检测锁定(见 docs/MATERIALS.md)。
 segments:
   - name: A
-    start: 15
-    end: 20
-    note: "时间以镜头扫描结果为准"
+    start: 59.309
+    end: 64.606
+    note: "two-person magic-circle scene: cloaked boy + blonde girl (wide shot + close-up), aligned to shot boundary"
   - name: B
-    start: 60
-    end: 65
-    note: "时间以镜头扫描结果为准"
+    start: 75.325
+    end: 84.710
+    note: "single-person action sequence: black-jacket boy mid-air fight, 6 fast cuts, aligned to shot boundary"
 
 paths:
   assets_root: assets
@@ -27,9 +27,15 @@ paths:
 # 人物检测(W2 生效)
 detection:
   method: yolon
-  score_thresh: 0.35
+  # 实测校准(2026-10-12):yolov8n 为 COCO 照片域模型,对动画画面置信度整体偏低 —
+  # A 段(远景双人)person 分数峰值 0.234,B 段(近景动作)峰值 0.926;
+  # 0.35 会把 A 段全部滤空,取 0.15 兼顾两段(误检由 NMS + max_persons + 跟踪平滑兜底)
+  score_thresh: 0.15
   device: cpu
   max_persons: 4
+  # 检测帧步长:每 N 帧做一次真实推理,跳过帧按相邻两次检测线性插值。
+  # 预算 ~150ms/帧;yolon 实测 CPU 约 20ms/帧,保持默认 1(逐帧真实检测)即可
+  frame_stride: 1
 
 # 人物替换(W3 生效)。key 一律从环境变量读(key_env),严禁写明文。
 replacement:
@@ -47,6 +53,8 @@ replacement:
 tracking:
   smoothing_window: 7
   max_gap_frames: 8
+  # 帧间 IoU 匹配阈值:上一帧轨迹与当前检测的 IoU 低于此值视为不同目标
+  iou_threshold: 0.3
 
 # 导出编码
 export:

@@ -6,11 +6,14 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "numpy>=2.0",
-    "opencv-python>=4.10",
+    # <5:OpenCV 5.0 移除了 CascadeClassifier,cascade 降级检测路径(契约条款 1)无法实现
+    "opencv-python>=4.10,<5",
     "pillow>=10.4",
     "httpx>=0.27",
     # 契约条款 1 要求 YAML 配置;pyyaml 为解析所必需,超出 TASK W1 交付清单所列 deps,属记录在案的偏离
     "pyyaml>=6.0",
+    # W2:yolon 检测路径的 CPU ONNX 推理(契约允许追加的唯一依赖;不用 ultralytics 包)
+    "onnxruntime>=1.19",
 ]
 
 [dependency-groups]

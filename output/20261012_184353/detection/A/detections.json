@@ -1,0 +1,784 @@
+{
+  "segment": "A",
+  "source": "assets/segments/A.mp4",
+  "run_id": "20261012_184353",
+  "method": "yolon",
+  "score_thresh": 0.15,
+  "max_persons": 4,
+  "frame_stride": 1,
+  "fps": 23.976024,
+  "width": 1920,
+  "height": 1080,
+  "n_frames": 127,
+  "avg_detect_ms": 16.67,
+  "max_detect_ms": 24.17,
+  "person_count_hist": {
+    "1": 13,
+    "0": 113,
+    "2": 1
+  },
+  "frames": [
+    {
+      "frame_idx": 0,
+      "n_persons": 1,
+      "avg_score": 0.2241,
+      "detect_ms": 23.67
+    },
+    {
+      "frame_idx": 1,
+      "n_persons": 1,
+      "avg_score": 0.2086,
+      "detect_ms": 16.06
+    },
+    {
+      "frame_idx": 2,
+      "n_persons": 1,
+      "avg_score": 0.2295,
+      "detect_ms": 14.25
+    },
+    {
+      "frame_idx": 3,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 14.06
+    },
+    {
+      "frame_idx": 4,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 15.29
+    },
+    {
+      "frame_idx": 5,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.9
+    },
+    {
+      "frame_idx": 6,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 15.2
+    },
+    {
+      "frame_idx": 7,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 15.45
+    },
+    {
+      "frame_idx": 8,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.76
+    },
+    {
+      "frame_idx": 9,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.23
+    },
+    {
+      "frame_idx": 10,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 17.01
+    },
+    {
+      "frame_idx": 11,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 20.66
+    },
+    {
+      "frame_idx": 12,
+      "n_persons": 1,
+      "avg_score": 0.2038,
+      "detect_ms": 17.34
+    },
+    {
+      "frame_idx": 13,
+      "n_persons": 1,
+      "avg_score": 0.2105,
+      "detect_ms": 21.05
+    },
+    {
+      "frame_idx": 14,
+      "n_persons": 1,
+      "avg_score": 0.234,
+      "detect_ms": 20.32
+    },
+    {
+      "frame_idx": 15,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 20.69
+    },
+    {
+      "frame_idx": 16,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 20.24
+    },
+    {
+      "frame_idx": 17,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.52
+    },
+    {
+      "frame_idx": 18,
+      "n_persons": 1,
+      "avg_score": 0.2133,
+      "detect_ms": 12.93
+    },
+    {
+      "frame_idx": 19,
+      "n_persons": 1,
+      "avg_score": 0.1974,
+      "detect_ms": 13.88
+    },
+    {
+      "frame_idx": 20,
+      "n_persons": 1,
+      "avg_score": 0.1731,
+      "detect_ms": 20.04
+    },
+    {
+      "frame_idx": 21,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 16.77
+    },
+    {
+      "frame_idx": 22,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 20.59
+    },
+    {
+      "frame_idx": 23,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 16.65
+    },
+    {
+      "frame_idx": 24,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 21.31
+    },
+    {
+      "frame_idx": 25,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 16.25
+    },
+    {
+      "frame_idx": 26,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 16.92
+    },
+    {
+      "frame_idx": 27,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 16.58
+    },
+    {
+      "frame_idx": 28,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 20.29
+    },
+    {
+      "frame_idx": 29,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 16.97
+    },
+    {
+      "frame_idx": 30,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 20.88
+    },
+    {
+      "frame_idx": 31,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 19.63
+    },
+    {
+      "frame_idx": 32,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 20.02
+    },
+    {
+      "frame_idx": 33,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 16.13
+    },
+    {
+      "frame_idx": 34,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 20.5
+    },
+    {
+      "frame_idx": 35,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 16.75
+    },
+    {
+      "frame_idx": 36,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 20.52
+    },
+    {
+      "frame_idx": 37,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 16.55
+    },
+    {
+      "frame_idx": 38,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 20.25
+    },
+    {
+      "frame_idx": 39,
+      "n_persons": 1,
+      "avg_score": 0.162,
+      "detect_ms": 15.68
+    },
+    {
+      "frame_idx": 40,
+      "n_persons": 1,
+      "avg_score": 0.1524,
+      "detect_ms": 14.61
+    },
+    {
+      "frame_idx": 41,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.18
+    },
+    {
+      "frame_idx": 42,
+      "n_persons": 2,
+      "avg_score": 0.1579,
+      "detect_ms": 14.1
+    },
+    {
+      "frame_idx": 43,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.59
+    },
+    {
+      "frame_idx": 44,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 16.47
+    },
+    {
+      "frame_idx": 45,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 20.76
+    },
+    {
+      "frame_idx": 46,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 20.6
+    },
+    {
+      "frame_idx": 47,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 20.23
+    },
+    {
+      "frame_idx": 48,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 21.56
+    },
+    {
+      "frame_idx": 49,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.59
+    },
+    {
+      "frame_idx": 50,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.63
+    },
+    {
+      "frame_idx": 51,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.33
+    },
+    {
+      "frame_idx": 52,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.39
+    },
+    {
+      "frame_idx": 53,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.48
+    },
+    {
+      "frame_idx": 54,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.1
+    },
+    {
+      "frame_idx": 55,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.27
+    },
+    {
+      "frame_idx": 56,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 14.38
+    },
+    {
+      "frame_idx": 57,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 14.22
+    },
+    {
+      "frame_idx": 58,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.56
+    },
+    {
+      "frame_idx": 59,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.46
+    },
+    {
+      "frame_idx": 60,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.49
+    },
+    {
+      "frame_idx": 61,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 20.24
+    },
+    {
+      "frame_idx": 62,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 16.82
+    },
+    {
+      "frame_idx": 63,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 20.25
+    },
+    {
+      "frame_idx": 64,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 16.98
+    },
+    {
+      "frame_idx": 65,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 20.85
+    },
+    {
+      "frame_idx": 66,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 16.6
+    },
+    {
+      "frame_idx": 67,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 20.34
+    },
+    {
+      "frame_idx": 68,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 16.63
+    },
+    {
+      "frame_idx": 69,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 20.49
+    },
+    {
+      "frame_idx": 70,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 16.44
+    },
+    {
+      "frame_idx": 71,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.42
+    },
+    {
+      "frame_idx": 72,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 12.96
+    },
+    {
+      "frame_idx": 73,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.52
+    },
+    {
+      "frame_idx": 74,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 14.63
+    },
+    {
+      "frame_idx": 75,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.36
+    },
+    {
+      "frame_idx": 76,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.68
+    },
+    {
+      "frame_idx": 77,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.53
+    },
+    {
+      "frame_idx": 78,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.15
+    },
+    {
+      "frame_idx": 79,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.62
+    },
+    {
+      "frame_idx": 80,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 16.72
+    },
+    {
+      "frame_idx": 81,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 20.56
+    },
+    {
+      "frame_idx": 82,
+      "n_persons": 1,
+      "avg_score": 0.1752,
+      "detect_ms": 16.6
+    },
+    {
+      "frame_idx": 83,
+      "n_persons": 1,
+      "avg_score": 0.1576,
+      "detect_ms": 17.25
+    },
+    {
+      "frame_idx": 84,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 20.34
+    },
+    {
+      "frame_idx": 85,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 12.82
+    },
+    {
+      "frame_idx": 86,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.98
+    },
+    {
+      "frame_idx": 87,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 20.7
+    },
+    {
+      "frame_idx": 88,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 16.87
+    },
+    {
+      "frame_idx": 89,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 16.76
+    },
+    {
+      "frame_idx": 90,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 20.92
+    },
+    {
+      "frame_idx": 91,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 16.4
+    },
+    {
+      "frame_idx": 92,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 24.17
+    },
+    {
+      "frame_idx": 93,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.47
+    },
+    {
+      "frame_idx": 94,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.46
+    },
+    {
+      "frame_idx": 95,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 12.91
+    },
+    {
+      "frame_idx": 96,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 17.01
+    },
+    {
+      "frame_idx": 97,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 20.62
+    },
+    {
+      "frame_idx": 98,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 16.38
+    },
+    {
+      "frame_idx": 99,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 16.76
+    },
+    {
+      "frame_idx": 100,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 19.91
+    },
+    {
+      "frame_idx": 101,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 16.59
+    },
+    {
+      "frame_idx": 102,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 20.25
+    },
+    {
+      "frame_idx": 103,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 19.8
+    },
+    {
+      "frame_idx": 104,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 17.21
+    },
+    {
+      "frame_idx": 105,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 14.44
+    },
+    {
+      "frame_idx": 106,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.55
+    },
+    {
+      "frame_idx": 107,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.95
+    },
+    {
+      "frame_idx": 108,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.8
+    },
+    {
+      "frame_idx": 109,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 14.12
+    },
+    {
+      "frame_idx": 110,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.7
+    },
+    {
+      "frame_idx": 111,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 14.12
+    },
+    {
+      "frame_idx": 112,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.73
+    },
+    {
+      "frame_idx": 113,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.1
+    },
+    {
+      "frame_idx": 114,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 12.59
+    },
+    {
+      "frame_idx": 115,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 14.15
+    },
+    {
+      "frame_idx": 116,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 13.0
+    },
+    {
+      "frame_idx": 117,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 20.28
+    },
+    {
+      "frame_idx": 118,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 17.22
+    },
+    {
+      "frame_idx": 119,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 20.86
+    },
+    {
+      "frame_idx": 120,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 16.71
+    },
+    {
+      "frame_idx": 121,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 17.48
+    },
+    {
+      "frame_idx": 122,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 20.62
+    },
+    {
+      "frame_idx": 123,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 16.93
+    },
+    {
+      "frame_idx": 124,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 21.13
+    },
+    {
+      "frame_idx": 125,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 16.25
+    },
+    {
+      "frame_idx": 126,
+      "n_persons": 0,
+      "avg_score": 0.0,
+      "detect_ms": 19.51
+    }
+  ]
+}

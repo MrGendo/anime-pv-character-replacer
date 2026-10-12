@@ -54,6 +54,30 @@ uv run python -m anime_pv_replacer.segment --config config/pipeline.yaml --stage
 
 产物写入 `output/{run_id}/detection/shots.json`,运行日志(JSONL)在 `output/{run_id}/logs/`。
 
+## 人物检测与跟踪(W2)
+
+先确保片段已切出(`--stage cut`),再按「先 detect 后 track」两步跑:
+
+```bash
+# 逐帧人物检测(yolon 路径,首次运行自动下载 yolov8n.onnx 约 12MB 到 output/work/models/)
+uv run python -m anime_pv_replacer.track --config config/pipeline.yaml --segment A --stage detect
+
+# IoU 跟踪(自动读取最新一次 detect 产物)
+uv run python -m anime_pv_replacer.track --config config/pipeline.yaml --segment A --stage track
+```
+
+- detect 产物:`output/{run_id}/detection/{SEG}/frames/`(逐帧 bbox json)+
+  `detections.json`(每帧人数、平均 score、检测耗时/帧、人数分布直方图)。
+- track 产物:`output/{run_id}/tracking/{SEG}/tracks.json`(每条轨迹的帧区间与逐帧
+  平滑 bbox、状态 TRACKING/LOST/RECOVER)+ `tracks_viz/` 每 10 帧一张画框可视化 jpg。
+- 检测双路径:`yolon`(onnxruntime CPU 推理,手写 letterbox/NMS 后处理,实测 1080p
+  约 17ms/帧)与 `cascade`(OpenCV Haar 人脸级联外扩人体近似,无权重降级路径)。
+  yolon 权重下载失败或库缺失时自动降级 cascade 并记 warning。
+- 阈值说明:`score_thresh` 默认 0.15 —— yolov8n 是 COCO 照片域模型,对动画画面
+  置信度整体偏低(远景段峰值仅 ~0.23),0.35 会把远景片段全部滤空。
+- CPU 预算超支(>150ms/帧)时可调 `detection.frame_stride > 1`:每 N 帧真实推理一次,
+  跳过帧按相邻两次检测线性插值(IoU 配对后过渡)。
+
 ## 测试
 
 ```bash

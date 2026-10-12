@@ -1,0 +1,2401 @@
+{
+  "segment": "B",
+  "detection_source": "output/20261012_184403/detection/B/detections.json",
+  "config": {
+    "iou_threshold": 0.3,
+    "max_gap_frames": 8,
+    "smoothing_window": 7
+  },
+  "n_frames": 225,
+  "n_tracks": 11,
+  "longest_track_frames": 38,
+  "tracks": [
+    {
+      "track_id": 1,
+      "frame_start": 52,
+      "frame_end": 62,
+      "frames": [
+        {
+          "frame_idx": 52,
+          "bbox": [
+            244.6,
+            55.3,
+            1208.6,
+            1065.3
+          ],
+          "score": 0.1902,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 53,
+          "bbox": [
+            148.8,
+            34.5,
+            1233.6,
+            1064.1
+          ],
+          "score": 0.3391,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 54,
+          "bbox": [
+            127.1,
+            30.0,
+            1445.6,
+            1064.1
+          ],
+          "score": 0.2342,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 55,
+          "bbox": [
+            127.1,
+            30.0,
+            1445.6,
+            1064.1
+          ],
+          "score": 0.2342,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 56,
+          "bbox": [
+            127.1,
+            30.0,
+            1445.6,
+            1064.1
+          ],
+          "score": 0.2342,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 57,
+          "bbox": [
+            127.1,
+            30.0,
+            1445.6,
+            1064.1
+          ],
+          "score": 0.2342,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 58,
+          "bbox": [
+            127.1,
+            30.0,
+            1445.6,
+            1064.1
+          ],
+          "score": 0.2342,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 59,
+          "bbox": [
+            127.1,
+            30.0,
+            1445.6,
+            1064.1
+          ],
+          "score": 0.2342,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 60,
+          "bbox": [
+            127.1,
+            30.0,
+            1445.6,
+            1064.1
+          ],
+          "score": 0.2342,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 61,
+          "bbox": [
+            127.1,
+            30.0,
+            1445.6,
+            1064.1
+          ],
+          "score": 0.2342,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 62,
+          "bbox": [
+            127.1,
+            30.0,
+            1445.6,
+            1064.1
+          ],
+          "score": 0.2342,
+          "state": "LOST"
+        }
+      ]
+    },
+    {
+      "track_id": 2,
+      "frame_start": 77,
+      "frame_end": 93,
+      "frames": [
+        {
+          "frame_idx": 77,
+          "bbox": [
+            7.7,
+            0.7,
+            1430.3,
+            1053.9
+          ],
+          "score": 0.3182,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 78,
+          "bbox": [
+            5.8,
+            1.1,
+            1476.1,
+            1053.2
+          ],
+          "score": 0.2635,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 79,
+          "bbox": [
+            5.1,
+            4.4,
+            1363.5,
+            1053.9
+          ],
+          "score": 0.2536,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 80,
+          "bbox": [
+            3.9,
+            4.6,
+            1394.3,
+            1051.2
+          ],
+          "score": 0.2185,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 81,
+          "bbox": [
+            3.9,
+            4.6,
+            1394.3,
+            1051.2
+          ],
+          "score": 0.2185,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 82,
+          "bbox": [
+            3.1,
+            4.4,
+            1422.5,
+            1046.2
+          ],
+          "score": 0.3019,
+          "state": "RECOVER"
+        },
+        {
+          "frame_idx": 83,
+          "bbox": [
+            3.1,
+            4.4,
+            1422.5,
+            1046.2
+          ],
+          "score": 0.3019,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 84,
+          "bbox": [
+            3.1,
+            4.4,
+            1422.5,
+            1046.2
+          ],
+          "score": 0.3019,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 85,
+          "bbox": [
+            12.0,
+            4.3,
+            1501.2,
+            1048.1
+          ],
+          "score": 0.2309,
+          "state": "RECOVER"
+        },
+        {
+          "frame_idx": 86,
+          "bbox": [
+            12.0,
+            4.3,
+            1501.2,
+            1048.1
+          ],
+          "score": 0.2309,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 87,
+          "bbox": [
+            12.0,
+            4.3,
+            1501.2,
+            1048.1
+          ],
+          "score": 0.2309,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 88,
+          "bbox": [
+            12.0,
+            4.3,
+            1501.2,
+            1048.1
+          ],
+          "score": 0.2309,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 89,
+          "bbox": [
+            12.0,
+            4.3,
+            1501.2,
+            1048.1
+          ],
+          "score": 0.2309,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 90,
+          "bbox": [
+            12.0,
+            4.3,
+            1501.2,
+            1048.1
+          ],
+          "score": 0.2309,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 91,
+          "bbox": [
+            12.0,
+            4.3,
+            1501.2,
+            1048.1
+          ],
+          "score": 0.2309,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 92,
+          "bbox": [
+            12.0,
+            4.3,
+            1501.2,
+            1048.1
+          ],
+          "score": 0.2309,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 93,
+          "bbox": [
+            12.0,
+            4.3,
+            1501.2,
+            1048.1
+          ],
+          "score": 0.2309,
+          "state": "LOST"
+        }
+      ]
+    },
+    {
+      "track_id": 3,
+      "frame_start": 96,
+      "frame_end": 128,
+      "frames": [
+        {
+          "frame_idx": 96,
+          "bbox": [
+            327.3,
+            3.0,
+            1907.5,
+            1070.6
+          ],
+          "score": 0.7448,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 97,
+          "bbox": [
+            400.5,
+            3.2,
+            1912.5,
+            1062.5
+          ],
+          "score": 0.5408,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 98,
+          "bbox": [
+            400.5,
+            3.2,
+            1912.5,
+            1062.5
+          ],
+          "score": 0.5408,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 99,
+          "bbox": [
+            400.5,
+            3.2,
+            1912.5,
+            1062.5
+          ],
+          "score": 0.5408,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 100,
+          "bbox": [
+            400.5,
+            3.2,
+            1912.5,
+            1062.5
+          ],
+          "score": 0.5408,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 101,
+          "bbox": [
+            384.8,
+            2.9,
+            1689.1,
+            999.7
+          ],
+          "score": 0.2435,
+          "state": "RECOVER"
+        },
+        {
+          "frame_idx": 102,
+          "bbox": [
+            384.8,
+            2.9,
+            1689.1,
+            999.7
+          ],
+          "score": 0.2435,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 103,
+          "bbox": [
+            377.7,
+            4.4,
+            1574.3,
+            968.6
+          ],
+          "score": 0.1725,
+          "state": "RECOVER"
+        },
+        {
+          "frame_idx": 104,
+          "bbox": [
+            372.9,
+            4.9,
+            1502.9,
+            948.3
+          ],
+          "score": 0.2591,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 105,
+          "bbox": [
+            369.8,
+            4.9,
+            1454.4,
+            934.1
+          ],
+          "score": 0.2422,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 106,
+          "bbox": [
+            369.8,
+            4.9,
+            1454.4,
+            934.1
+          ],
+          "score": 0.2422,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 107,
+          "bbox": [
+            366.3,
+            4.4,
+            1461.8,
+            925.5
+          ],
+          "score": 0.2822,
+          "state": "RECOVER"
+        },
+        {
+          "frame_idx": 108,
+          "bbox": [
+            369.1,
+            4.5,
+            1404.9,
+            897.2
+          ],
+          "score": 0.3623,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 109,
+          "bbox": [
+            369.1,
+            4.5,
+            1404.9,
+            897.2
+          ],
+          "score": 0.3623,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 110,
+          "bbox": [
+            369.1,
+            4.5,
+            1404.9,
+            897.2
+          ],
+          "score": 0.3623,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 111,
+          "bbox": [
+            305.8,
+            6.0,
+            1336.3,
+            897.5
+          ],
+          "score": 0.2924,
+          "state": "RECOVER"
+        },
+        {
+          "frame_idx": 112,
+          "bbox": [
+            259.8,
+            7.7,
+            1361.8,
+            923.8
+          ],
+          "score": 0.3202,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 113,
+          "bbox": [
+            208.9,
+            6.4,
+            1326.4,
+            951.3
+          ],
+          "score": 0.5279,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 114,
+          "bbox": [
+            158.4,
+            5.4,
+            1293.1,
+            980.0
+          ],
+          "score": 0.5174,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 115,
+          "bbox": [
+            107.9,
+            5.0,
+            1277.9,
+            1009.1
+          ],
+          "score": 0.4656,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 116,
+          "bbox": [
+            58.8,
+            5.3,
+            1219.1,
+            1036.8
+          ],
+          "score": 0.4652,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 117,
+          "bbox": [
+            13.4,
+            4.8,
+            1209.4,
+            1064.4
+          ],
+          "score": 0.3503,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 118,
+          "bbox": [
+            13.4,
+            3.2,
+            1214.1,
+            1065.6
+          ],
+          "score": 0.3077,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 119,
+          "bbox": [
+            32.4,
+            2.2,
+            1157.4,
+            1065.7
+          ],
+          "score": 0.5655,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 120,
+          "bbox": [
+            55.7,
+            3.2,
+            1163.6,
+            1064.4
+          ],
+          "score": 0.4957,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 121,
+          "bbox": [
+            55.7,
+            3.2,
+            1163.6,
+            1064.4
+          ],
+          "score": 0.4957,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 122,
+          "bbox": [
+            55.7,
+            3.2,
+            1163.6,
+            1064.4
+          ],
+          "score": 0.4957,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 123,
+          "bbox": [
+            55.7,
+            3.2,
+            1163.6,
+            1064.4
+          ],
+          "score": 0.4957,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 124,
+          "bbox": [
+            55.7,
+            3.2,
+            1163.6,
+            1064.4
+          ],
+          "score": 0.4957,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 125,
+          "bbox": [
+            55.7,
+            3.2,
+            1163.6,
+            1064.4
+          ],
+          "score": 0.4957,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 126,
+          "bbox": [
+            55.7,
+            3.2,
+            1163.6,
+            1064.4
+          ],
+          "score": 0.4957,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 127,
+          "bbox": [
+            55.7,
+            3.2,
+            1163.6,
+            1064.4
+          ],
+          "score": 0.4957,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 128,
+          "bbox": [
+            55.7,
+            3.2,
+            1163.6,
+            1064.4
+          ],
+          "score": 0.4957,
+          "state": "LOST"
+        }
+      ]
+    },
+    {
+      "track_id": 4,
+      "frame_start": 97,
+      "frame_end": 105,
+      "frames": [
+        {
+          "frame_idx": 97,
+          "bbox": [
+            1378.6,
+            22.7,
+            1918.2,
+            1058.9
+          ],
+          "score": 0.1568,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 98,
+          "bbox": [
+            1378.6,
+            22.7,
+            1918.2,
+            1058.9
+          ],
+          "score": 0.1568,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 99,
+          "bbox": [
+            1378.6,
+            22.7,
+            1918.2,
+            1058.9
+          ],
+          "score": 0.1568,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 100,
+          "bbox": [
+            1378.6,
+            22.7,
+            1918.2,
+            1058.9
+          ],
+          "score": 0.1568,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 101,
+          "bbox": [
+            1378.6,
+            22.7,
+            1918.2,
+            1058.9
+          ],
+          "score": 0.1568,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 102,
+          "bbox": [
+            1378.6,
+            22.7,
+            1918.2,
+            1058.9
+          ],
+          "score": 0.1568,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 103,
+          "bbox": [
+            1378.6,
+            22.7,
+            1918.2,
+            1058.9
+          ],
+          "score": 0.1568,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 104,
+          "bbox": [
+            1378.6,
+            22.7,
+            1918.2,
+            1058.9
+          ],
+          "score": 0.1568,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 105,
+          "bbox": [
+            1378.6,
+            22.7,
+            1918.2,
+            1058.9
+          ],
+          "score": 0.1568,
+          "state": "LOST"
+        }
+      ]
+    },
+    {
+      "track_id": 5,
+      "frame_start": 113,
+      "frame_end": 134,
+      "frames": [
+        {
+          "frame_idx": 113,
+          "bbox": [
+            954.0,
+            13.6,
+            1917.5,
+            1065.6
+          ],
+          "score": 0.3809,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 114,
+          "bbox": [
+            953.5,
+            18.1,
+            1916.7,
+            1065.8
+          ],
+          "score": 0.3919,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 115,
+          "bbox": [
+            937.1,
+            14.2,
+            1914.8,
+            1063.1
+          ],
+          "score": 0.3336,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 116,
+          "bbox": [
+            926.8,
+            12.3,
+            1914.0,
+            1061.5
+          ],
+          "score": 0.3141,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 117,
+          "bbox": [
+            907.2,
+            10.1,
+            1903.4,
+            1062.7
+          ],
+          "score": 0.2412,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 118,
+          "bbox": [
+            896.1,
+            8.9,
+            1896.5,
+            1063.3
+          ],
+          "score": 0.2293,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 119,
+          "bbox": [
+            865.0,
+            8.1,
+            1879.5,
+            1063.9
+          ],
+          "score": 0.6332,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 120,
+          "bbox": [
+            822.2,
+            7.1,
+            1876.4,
+            1064.3
+          ],
+          "score": 0.603,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 121,
+          "bbox": [
+            723.0,
+            4.9,
+            1827.9,
+            1063.5
+          ],
+          "score": 0.6466,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 122,
+          "bbox": [
+            630.7,
+            5.0,
+            1776.2,
+            1063.7
+          ],
+          "score": 0.6301,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 123,
+          "bbox": [
+            542.0,
+            4.8,
+            1742.8,
+            1064.1
+          ],
+          "score": 0.7305,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 124,
+          "bbox": [
+            463.0,
+            5.4,
+            1714.8,
+            1063.0
+          ],
+          "score": 0.7363,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 125,
+          "bbox": [
+            384.3,
+            5.6,
+            1695.7,
+            1061.9
+          ],
+          "score": 0.6817,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 126,
+          "bbox": [
+            328.7,
+            5.6,
+            1687.8,
+            1060.6
+          ],
+          "score": 0.6755,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 127,
+          "bbox": [
+            328.7,
+            5.6,
+            1687.8,
+            1060.6
+          ],
+          "score": 0.6755,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 128,
+          "bbox": [
+            328.7,
+            5.6,
+            1687.8,
+            1060.6
+          ],
+          "score": 0.6755,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 129,
+          "bbox": [
+            328.7,
+            5.6,
+            1687.8,
+            1060.6
+          ],
+          "score": 0.6755,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 130,
+          "bbox": [
+            328.7,
+            5.6,
+            1687.8,
+            1060.6
+          ],
+          "score": 0.6755,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 131,
+          "bbox": [
+            328.7,
+            5.6,
+            1687.8,
+            1060.6
+          ],
+          "score": 0.6755,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 132,
+          "bbox": [
+            328.7,
+            5.6,
+            1687.8,
+            1060.6
+          ],
+          "score": 0.6755,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 133,
+          "bbox": [
+            328.7,
+            5.6,
+            1687.8,
+            1060.6
+          ],
+          "score": 0.6755,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 134,
+          "bbox": [
+            328.7,
+            5.6,
+            1687.8,
+            1060.6
+          ],
+          "score": 0.6755,
+          "state": "LOST"
+        }
+      ]
+    },
+    {
+      "track_id": 6,
+      "frame_start": 127,
+      "frame_end": 161,
+      "frames": [
+        {
+          "frame_idx": 127,
+          "bbox": [
+            1329.0,
+            0.9,
+            1887.3,
+            660.9
+          ],
+          "score": 0.7619,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 128,
+          "bbox": [
+            1194.8,
+            1.6,
+            1760.5,
+            730.6
+          ],
+          "score": 0.8569,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 129,
+          "bbox": [
+            1150.0,
+            1.8,
+            1718.4,
+            751.4
+          ],
+          "score": 0.8498,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 130,
+          "bbox": [
+            1110.3,
+            39.9,
+            1640.2,
+            774.1
+          ],
+          "score": 0.8375,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 131,
+          "bbox": [
+            1086.4,
+            62.7,
+            1593.5,
+            788.1
+          ],
+          "score": 0.8595,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 132,
+          "bbox": [
+            1049.1,
+            101.1,
+            1544.9,
+            818.8
+          ],
+          "score": 0.8871,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 133,
+          "bbox": [
+            1022.2,
+            128.1,
+            1510.1,
+            840.5
+          ],
+          "score": 0.8758,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 134,
+          "bbox": [
+            948.5,
+            172.5,
+            1417.6,
+            884.1
+          ],
+          "score": 0.8519,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 135,
+          "bbox": [
+            913.1,
+            216.6,
+            1361.3,
+            908.5
+          ],
+          "score": 0.8519,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 136,
+          "bbox": [
+            860.9,
+            226.7,
+            1326.7,
+            944.2
+          ],
+          "score": 0.8659,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 137,
+          "bbox": [
+            818.6,
+            215.1,
+            1324.8,
+            972.8
+          ],
+          "score": 0.867,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 138,
+          "bbox": [
+            783.2,
+            205.5,
+            1329.8,
+            1004.0
+          ],
+          "score": 0.8245,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 139,
+          "bbox": [
+            766.3,
+            176.4,
+            1349.8,
+            1016.9
+          ],
+          "score": 0.8243,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 140,
+          "bbox": [
+            751.1,
+            164.6,
+            1371.1,
+            1031.3
+          ],
+          "score": 0.9082,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 141,
+          "bbox": [
+            742.5,
+            149.6,
+            1401.3,
+            1046.3
+          ],
+          "score": 0.9142,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 142,
+          "bbox": [
+            733.2,
+            128.9,
+            1434.7,
+            1059.8
+          ],
+          "score": 0.9212,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 143,
+          "bbox": [
+            740.7,
+            142.4,
+            1446.1,
+            1062.9
+          ],
+          "score": 0.9259,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 144,
+          "bbox": [
+            755.3,
+            154.2,
+            1484.3,
+            1066.9
+          ],
+          "score": 0.8926,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 145,
+          "bbox": [
+            762.7,
+            163.7,
+            1515.5,
+            1068.1
+          ],
+          "score": 0.8827,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 146,
+          "bbox": [
+            774.5,
+            172.2,
+            1560.4,
+            1069.5
+          ],
+          "score": 0.8092,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 147,
+          "bbox": [
+            784.9,
+            163.7,
+            1604.2,
+            1069.6
+          ],
+          "score": 0.8686,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 148,
+          "bbox": [
+            800.6,
+            154.8,
+            1662.2,
+            1069.3
+          ],
+          "score": 0.8622,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 149,
+          "bbox": [
+            817.0,
+            151.3,
+            1717.2,
+            1069.9
+          ],
+          "score": 0.8607,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 150,
+          "bbox": [
+            808.0,
+            150.1,
+            1732.8,
+            1069.8
+          ],
+          "score": 0.3924,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 151,
+          "bbox": [
+            791.6,
+            150.8,
+            1722.1,
+            1068.7
+          ],
+          "score": 0.3933,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 152,
+          "bbox": [
+            678.1,
+            129.0,
+            1724.0,
+            1068.1
+          ],
+          "score": 0.1766,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 153,
+          "bbox": [
+            560.1,
+            108.1,
+            1714.1,
+            1067.2
+          ],
+          "score": 0.1599,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 154,
+          "bbox": [
+            560.1,
+            108.1,
+            1714.1,
+            1067.2
+          ],
+          "score": 0.1599,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 155,
+          "bbox": [
+            560.1,
+            108.1,
+            1714.1,
+            1067.2
+          ],
+          "score": 0.1599,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 156,
+          "bbox": [
+            560.1,
+            108.1,
+            1714.1,
+            1067.2
+          ],
+          "score": 0.1599,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 157,
+          "bbox": [
+            560.1,
+            108.1,
+            1714.1,
+            1067.2
+          ],
+          "score": 0.1599,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 158,
+          "bbox": [
+            560.1,
+            108.1,
+            1714.1,
+            1067.2
+          ],
+          "score": 0.1599,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 159,
+          "bbox": [
+            560.1,
+            108.1,
+            1714.1,
+            1067.2
+          ],
+          "score": 0.1599,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 160,
+          "bbox": [
+            560.1,
+            108.1,
+            1714.1,
+            1067.2
+          ],
+          "score": 0.1599,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 161,
+          "bbox": [
+            560.1,
+            108.1,
+            1714.1,
+            1067.2
+          ],
+          "score": 0.1599,
+          "state": "LOST"
+        }
+      ]
+    },
+    {
+      "track_id": 7,
+      "frame_start": 157,
+      "frame_end": 168,
+      "frames": [
+        {
+          "frame_idx": 157,
+          "bbox": [
+            750.3,
+            417.6,
+            1172.2,
+            940.2
+          ],
+          "score": 0.2233,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 158,
+          "bbox": [
+            750.3,
+            417.6,
+            1172.2,
+            940.2
+          ],
+          "score": 0.2233,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 159,
+          "bbox": [
+            750.3,
+            417.6,
+            1172.2,
+            940.2
+          ],
+          "score": 0.2233,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 160,
+          "bbox": [
+            778.4,
+            445.2,
+            1184.2,
+            933.9
+          ],
+          "score": 0.3703,
+          "state": "RECOVER"
+        },
+        {
+          "frame_idx": 161,
+          "bbox": [
+            778.4,
+            445.2,
+            1184.2,
+            933.9
+          ],
+          "score": 0.3703,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 162,
+          "bbox": [
+            778.4,
+            445.2,
+            1184.2,
+            933.9
+          ],
+          "score": 0.3703,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 163,
+          "bbox": [
+            778.4,
+            445.2,
+            1184.2,
+            933.9
+          ],
+          "score": 0.3703,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 164,
+          "bbox": [
+            778.4,
+            445.2,
+            1184.2,
+            933.9
+          ],
+          "score": 0.3703,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 165,
+          "bbox": [
+            778.4,
+            445.2,
+            1184.2,
+            933.9
+          ],
+          "score": 0.3703,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 166,
+          "bbox": [
+            778.4,
+            445.2,
+            1184.2,
+            933.9
+          ],
+          "score": 0.3703,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 167,
+          "bbox": [
+            778.4,
+            445.2,
+            1184.2,
+            933.9
+          ],
+          "score": 0.3703,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 168,
+          "bbox": [
+            778.4,
+            445.2,
+            1184.2,
+            933.9
+          ],
+          "score": 0.3703,
+          "state": "LOST"
+        }
+      ]
+    },
+    {
+      "track_id": 8,
+      "frame_start": 167,
+      "frame_end": 204,
+      "frames": [
+        {
+          "frame_idx": 167,
+          "bbox": [
+            5.3,
+            3.2,
+            1913.0,
+            1060.5
+          ],
+          "score": 0.8567,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 168,
+          "bbox": [
+            7.7,
+            3.2,
+            1916.0,
+            1063.7
+          ],
+          "score": 0.8043,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 169,
+          "bbox": [
+            6.1,
+            2.4,
+            1916.6,
+            1064.6
+          ],
+          "score": 0.7816,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 170,
+          "bbox": [
+            5.1,
+            2.9,
+            1912.5,
+            1063.9
+          ],
+          "score": 0.7375,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 171,
+          "bbox": [
+            5.0,
+            3.1,
+            1910.3,
+            1064.0
+          ],
+          "score": 0.8864,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 172,
+          "bbox": [
+            5.1,
+            3.1,
+            1911.5,
+            1064.0
+          ],
+          "score": 0.8609,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 173,
+          "bbox": [
+            5.1,
+            2.9,
+            1910.6,
+            1063.7
+          ],
+          "score": 0.6935,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 174,
+          "bbox": [
+            4.4,
+            2.6,
+            1909.5,
+            1064.3
+          ],
+          "score": 0.6905,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 175,
+          "bbox": [
+            3.7,
+            2.6,
+            1908.2,
+            1063.9
+          ],
+          "score": 0.8884,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 176,
+          "bbox": [
+            4.0,
+            2.8,
+            1908.1,
+            1063.4
+          ],
+          "score": 0.7996,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 177,
+          "bbox": [
+            5.0,
+            2.7,
+            1902.6,
+            1064.0
+          ],
+          "score": 0.5065,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 178,
+          "bbox": [
+            7.1,
+            3.3,
+            1884.1,
+            1064.5
+          ],
+          "score": 0.2938,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 179,
+          "bbox": [
+            9.1,
+            3.9,
+            1864.0,
+            1065.1
+          ],
+          "score": 0.2971,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 180,
+          "bbox": [
+            31.4,
+            4.6,
+            1842.8,
+            1064.8
+          ],
+          "score": 0.402,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 181,
+          "bbox": [
+            53.3,
+            5.5,
+            1821.7,
+            1064.3
+          ],
+          "score": 0.4199,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 182,
+          "bbox": [
+            52.8,
+            6.8,
+            1797.0,
+            1064.6
+          ],
+          "score": 0.4961,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 183,
+          "bbox": [
+            52.4,
+            8.2,
+            1771.5,
+            1065.1
+          ],
+          "score": 0.5,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 184,
+          "bbox": [
+            51.2,
+            9.9,
+            1750.1,
+            1064.8
+          ],
+          "score": 0.6647,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 185,
+          "bbox": [
+            48.5,
+            10.9,
+            1740.1,
+            1064.2
+          ],
+          "score": 0.6504,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 186,
+          "bbox": [
+            45.9,
+            11.5,
+            1725.7,
+            1063.4
+          ],
+          "score": 0.3319,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 187,
+          "bbox": [
+            22.8,
+            12.2,
+            1715.4,
+            1063.6
+          ],
+          "score": 0.3409,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 188,
+          "bbox": [
+            61.3,
+            12.5,
+            1674.7,
+            1044.8
+          ],
+          "score": 0.1525,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 189,
+          "bbox": [
+            122.0,
+            11.8,
+            1636.7,
+            1026.1
+          ],
+          "score": 0.1719,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 190,
+          "bbox": [
+            182.6,
+            11.1,
+            1598.4,
+            1007.3
+          ],
+          "score": 0.1731,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 191,
+          "bbox": [
+            242.4,
+            9.9,
+            1563.9,
+            988.9
+          ],
+          "score": 0.1605,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 192,
+          "bbox": [
+            306.1,
+            7.9,
+            1532.4,
+            970.3
+          ],
+          "score": 0.1527,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 193,
+          "bbox": [
+            368.0,
+            7.3,
+            1502.4,
+            954.1
+          ],
+          "score": 0.1741,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 194,
+          "bbox": [
+            421.9,
+            8.7,
+            1441.5,
+            939.7
+          ],
+          "score": 0.1954,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 195,
+          "bbox": [
+            369.7,
+            9.4,
+            1504.5,
+            959.2
+          ],
+          "score": 0.3035,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 196,
+          "bbox": [
+            317.5,
+            11.5,
+            1567.8,
+            977.9
+          ],
+          "score": 0.4047,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 197,
+          "bbox": [
+            317.5,
+            11.5,
+            1567.8,
+            977.9
+          ],
+          "score": 0.4047,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 198,
+          "bbox": [
+            317.5,
+            11.5,
+            1567.8,
+            977.9
+          ],
+          "score": 0.4047,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 199,
+          "bbox": [
+            317.5,
+            11.5,
+            1567.8,
+            977.9
+          ],
+          "score": 0.4047,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 200,
+          "bbox": [
+            317.5,
+            11.5,
+            1567.8,
+            977.9
+          ],
+          "score": 0.4047,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 201,
+          "bbox": [
+            317.5,
+            11.5,
+            1567.8,
+            977.9
+          ],
+          "score": 0.4047,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 202,
+          "bbox": [
+            317.5,
+            11.5,
+            1567.8,
+            977.9
+          ],
+          "score": 0.4047,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 203,
+          "bbox": [
+            317.5,
+            11.5,
+            1567.8,
+            977.9
+          ],
+          "score": 0.4047,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 204,
+          "bbox": [
+            317.5,
+            11.5,
+            1567.8,
+            977.9
+          ],
+          "score": 0.4047,
+          "state": "LOST"
+        }
+      ]
+    },
+    {
+      "track_id": 9,
+      "frame_start": 200,
+      "frame_end": 218,
+      "frames": [
+        {
+          "frame_idx": 200,
+          "bbox": [
+            1121.6,
+            399.6,
+            1705.8,
+            1044.6
+          ],
+          "score": 0.8302,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 201,
+          "bbox": [
+            1121.6,
+            391.9,
+            1702.6,
+            1048.9
+          ],
+          "score": 0.7786,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 202,
+          "bbox": [
+            1121.9,
+            386.0,
+            1703.3,
+            1050.0
+          ],
+          "score": 0.5666,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 203,
+          "bbox": [
+            1088.9,
+            327.1,
+            1680.5,
+            1038.0
+          ],
+          "score": 0.2906,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 204,
+          "bbox": [
+            1071.1,
+            270.6,
+            1727.8,
+            1033.4
+          ],
+          "score": 0.2375,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 205,
+          "bbox": [
+            1060.0,
+            236.4,
+            1759.7,
+            1027.3
+          ],
+          "score": 0.2551,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 206,
+          "bbox": [
+            1041.8,
+            208.7,
+            1780.0,
+            1006.4
+          ],
+          "score": 0.2753,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 207,
+          "bbox": [
+            1014.9,
+            158.8,
+            1761.3,
+            984.8
+          ],
+          "score": 0.4021,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 208,
+          "bbox": [
+            988.5,
+            111.3,
+            1742.8,
+            937.3
+          ],
+          "score": 0.2953,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 209,
+          "bbox": [
+            957.7,
+            59.0,
+            1768.2,
+            894.1
+          ],
+          "score": 0.2653,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 210,
+          "bbox": [
+            946.4,
+            38.9,
+            1805.0,
+            854.9
+          ],
+          "score": 0.1911,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 211,
+          "bbox": [
+            946.4,
+            38.9,
+            1805.0,
+            854.9
+          ],
+          "score": 0.1911,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 212,
+          "bbox": [
+            946.4,
+            38.9,
+            1805.0,
+            854.9
+          ],
+          "score": 0.1911,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 213,
+          "bbox": [
+            946.4,
+            38.9,
+            1805.0,
+            854.9
+          ],
+          "score": 0.1911,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 214,
+          "bbox": [
+            946.4,
+            38.9,
+            1805.0,
+            854.9
+          ],
+          "score": 0.1911,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 215,
+          "bbox": [
+            946.4,
+            38.9,
+            1805.0,
+            854.9
+          ],
+          "score": 0.1911,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 216,
+          "bbox": [
+            946.4,
+            38.9,
+            1805.0,
+            854.9
+          ],
+          "score": 0.1911,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 217,
+          "bbox": [
+            946.4,
+            38.9,
+            1805.0,
+            854.9
+          ],
+          "score": 0.1911,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 218,
+          "bbox": [
+            946.4,
+            38.9,
+            1805.0,
+            854.9
+          ],
+          "score": 0.1911,
+          "state": "LOST"
+        }
+      ]
+    },
+    {
+      "track_id": 10,
+      "frame_start": 200,
+      "frame_end": 209,
+      "frames": [
+        {
+          "frame_idx": 200,
+          "bbox": [
+            4.1,
+            428.6,
+            828.5,
+            1063.8
+          ],
+          "score": 0.2736,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 201,
+          "bbox": [
+            5.2,
+            454.2,
+            832.1,
+            1062.9
+          ],
+          "score": 0.2414,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 202,
+          "bbox": [
+            5.2,
+            454.2,
+            832.1,
+            1062.9
+          ],
+          "score": 0.2414,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 203,
+          "bbox": [
+            5.2,
+            454.2,
+            832.1,
+            1062.9
+          ],
+          "score": 0.2414,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 204,
+          "bbox": [
+            5.2,
+            454.2,
+            832.1,
+            1062.9
+          ],
+          "score": 0.2414,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 205,
+          "bbox": [
+            5.2,
+            454.2,
+            832.1,
+            1062.9
+          ],
+          "score": 0.2414,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 206,
+          "bbox": [
+            5.2,
+            454.2,
+            832.1,
+            1062.9
+          ],
+          "score": 0.2414,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 207,
+          "bbox": [
+            5.2,
+            454.2,
+            832.1,
+            1062.9
+          ],
+          "score": 0.2414,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 208,
+          "bbox": [
+            5.2,
+            454.2,
+            832.1,
+            1062.9
+          ],
+          "score": 0.2414,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 209,
+          "bbox": [
+            5.2,
+            454.2,
+            832.1,
+            1062.9
+          ],
+          "score": 0.2414,
+          "state": "LOST"
+        }
+      ]
+    },
+    {
+      "track_id": 11,
+      "frame_start": 221,
+      "frame_end": 224,
+      "frames": [
+        {
+          "frame_idx": 221,
+          "bbox": [
+            629.1,
+            8.2,
+            1908.1,
+            1018.1
+          ],
+          "score": 0.3293,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 222,
+          "bbox": [
+            629.8,
+            8.3,
+            1908.2,
+            1018.2
+          ],
+          "score": 0.3059,
+          "state": "TRACKING"
+        },
+        {
+          "frame_idx": 223,
+          "bbox": [
+            629.8,
+            8.3,
+            1908.2,
+            1018.2
+          ],
+          "score": 0.3059,
+          "state": "LOST"
+        },
+        {
+          "frame_idx": 224,
+          "bbox": [
+            629.8,
+            8.3,
+            1908.2,
+            1018.2
+          ],
+          "score": 0.3059,
+          "state": "LOST"
+        }
+      ]
+    }
+  ]
+}
