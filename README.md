@@ -1,167 +1,131 @@
-# anime-pv-replacer
+# Anime PV Character Replacement Pipeline（题 C 交付）
 
-动画 PV 人物替换管线:PV → 切片段 → 人物定位/跟踪 → 用标准日式人设图替换人物 → 合成导出 → 评估。
-当前进度:**W4(自动化评估 + 报告产物生成)**。
+选择 2026 年 10 月新番「マジカル★エクスプローラー」第1弾PV，截取两个代表性片段（A：双人魔法阵场景 / B：单人空中动作序列），用 AI 生成的标准日式人设图（三视图）替换视频中的人物，交付可复用、可评估的完整 Pipeline。
+
+- PV 来源（Aniplex 公式频道）：<https://www.youtube.com/watch?v=bQuJywMCYWg>
+- 官方网站：<https://majieku.com>
+- 素材来源与使用限制：[docs/MATERIALS.md](docs/MATERIALS.md)
+- 评估方案设计：[docs/EVALUATION_DESIGN.md](docs/EVALUATION_DESIGN.md)
+- 实验台账（全部 run 索引 + 外部 API 成本）：[docs/EXPERIMENT_LEDGER.md](docs/EXPERIMENT_LEDGER.md)
+- 最终评估报告：[experiments/eval_20261012_w3eval.md](experiments/eval_20261012_w3eval.md)
+
+## 实现方式以及时间规划
+
+四波次开发（每波委派 Claude Code 实现、本人验收后提交；波次划分与验收标准见 docs/plan/TASK_W*.md）：
+
+| 波次 | 内容 | 实际耗时 | 验收 |
+|---|---|---|---|
+| W1 | 项目骨架/配置/切片/镜头边界 | 10min 开发 + ~40min 素材侦察 | 5 tests ✅ commit 98a3e43 |
+| W2 | 人物检测(yolon onnx + cascade 降级)/IoU 跟踪 | 18min 开发 + 20min 验收 | 12 tests ✅ |
+| W3 | VLM grounding 检测 + sprite/palette 双路径替换 + 合成导出 | 17min 开发 + 25min 真实运行 | 18 tests ✅ |
+| W4 | 自动化评估(5 指标+权重) | 21min 开发 + 10min 验收 | 25 tests ✅ |
+| W5 | 结果整理/README/发布 | ~40min | 本文件 |
+
+总预算 8-10 小时，实际 ~3.5 小时完成（素材侦察与实验设计占大头；扩展功能未做，聚焦双片段完整实验）。
+每阶段验收标准：pytest 全绿 + 真实命令跑出产物 + 本人抽查关键中间产物后才 commit。
+
+## Pipeline 设计考量和侧重点
+
+```
+PV 下载(1080p) → 镜头边界检测(HSV 直方图差分,53 镜头) → 片段选取(A/B 对齐镜头边界)
+      → 人物定位: VLM grounding(Qwen3-VL keyframe@5 + 线性插值) [yolon 备选]
+      → IoU 跟踪 + bbox 滑窗平滑
+      → 人物替换: sprite(立绘贴入,脚部对齐,alpha 羽化) / palette(LAB 色板迁移+边缘保留)
+      → ffmpeg 合成导出(crf18) → 自动评估(5 维加权 100 分制) → 盲评
+```
+
+侧重点：
+1. **跨片段复用性优先**——同一 config、同一命令、同一段代码跑 A/B；片段差异只体现在素材（人设图）与 track 选择，无任何按片段写死的分支
+2. **降级路径完备**——yolon(COCO) 对动画域失效(检出率 11%)时切换 VLM grounding；VLM 无 key 时人话提示退出；付费 API(ARK) 仅配置位未授权不真调
+3. **背景零污染**——sprite/palette 均严格只写 bbox 内像素，背景保真度由回归测试保证（区域外 1 像素改动即测试失败）
+4. **诚实标注**——所有产物带 run_id + JSONL 运行日志；失败案例（见下）如实入报告
+
+## 结果评估方案的设计和考量
+
+指标体系（100 分制，权重按替换任务成败关键分配）：
+
+| 维度 | 权重 | 自动指标 |
+|---|---|---|
+| 人物身份一致性 | 25% | LAB 直方图相关性+主色板余弦（CLIP 不可用时的降级近似，已注明） |
+| 画面质量 | 15% | Laplacian 清晰度+结构保留 |
+| 动作一致性 | 20% | bbox 区域光流幅值相关性 |
+| 时序稳定性 | 20% | 闪烁比（1.0=与原视频一致） |
+| 背景保真度 | 10% | bbox 外逐像素相等率+边缘带 SSIM |
+| 跨片段泛化 | 10% | 同 method A/B 小计差+完成率+指标 σ |
+
+考量：身份/动作/稳定性占 65%——「换对人、不乱动、不闪烁」是替换任务的核心；盲评单独列示不混入自动分；两片段同一指标同一规则同一流程。完整方案见 docs/EVALUATION_DESIGN.md。
+
+### 片段 A、B 实验结果（同一 Pipeline、同一 config）
+
+| 组合 | 总分 | 身份 | 质量 | 动作 | 时序 | 背景 |
+|---|---|---|---|---|---|---|
+| A × sprite | **84.2** | 76.4 | 93.9 | 98.3 | 74.1 | 99.1 |
+| A × palette | **83.0** | 74.6 | 70.9 | 97.0 | 79.5 | 88.5 |
+| B × sprite | **63.2** | 89.8 | 84.4 | 18.9 | 39.0 | 98.6 |
+| B × palette | **80.3** | 67.5 | 56.0 | 86.8 | 95.9 | 89.5 |
+
+- 跨片段泛化：sprite A-B 小计差 21.0（动作段崩），palette 仅 2.7——palette 在快切动作段的时序稳定性(95.9)远好于 sprite(39.0)
+- 关键对比图：results/compare_grids/overview_4combo.jpg（四组合并排）；results/final_videos/*.mp4（成片）
+- 成本：本地替换 0 元；VLM grounding ~70 次调用（个人 SiliconFlow 订阅内）；耗时 sprite 8.2/5.6ms/帧、palette 81/38ms/帧；失败帧 0；人工干预 0
+- 复现：`make setup && uv run python -m anime_pv_replacer.segment --stage cut && ... `（完整命令链见 README 运行节）
+
+## AI coding 工具、Token 用量及主要消耗环节
+
+工具：Claude Code CLI（claude -p，GLM-5.3 后端，open.bigmodel.cn/api/anthropic），四波次委派。用量取自 `claude --output-format json` 的 usage 字段（docs/logs/taskW*_claude.json 原始记录）：
+
+| 波次 | turns | 时长 | input | output | cache_read |
+|---|---|---|---|---|---|
+| W1 | 50 | 600s | 94,988 | 22,687 | 1,915,392 |
+| W2 | 74 | 1055s | 75,745 | 50,222 | 3,175,424 |
+| W3 | 76 | 1031s | 147,355 | 62,017 | 4,369,728 |
+| W4 | 45 | 1231s | 107,111 | 65,778 | 3,828,544 |
+| 合计 | 245 | 3917s | **425,199** | **200,704** | **13,289,088** |
+
+最耗环节：**W3（147k input / 62k output）**——VLM grounding + 双路径替换 + 合成 CLI 三模块同波，契约条款最多；W4 时长最长（1231s）但 turns 最少（评估数学映射调试来回多）。
+另有本人（Hermes agent）直接消耗：素材侦察/帧扫描/grounding 验证/盲评 ~130 次 VLM 调用（SiliconFlow 订阅内）。
+
+## 个人投入时间最多的部分（不含 LLM 直接完成的工作）
+
+1. **素材侦察与选段（~1.5h，最大头）**：yt-dlp 搜 2026 新番 PV→下载 3 部候选→逐帧 VLM 扫描（12+38+8 帧）→镜头边界交叉比对→人工裁定 A/B。难点：VLM 对特效帧（魔法阵）报「人物」的幻觉框，用裁剪回验法（裁出来再问一次）识别并排除；官网人设图抓取被浏览器工具阻塞，改 AI 生成原创人设（免版权风险）
+2. **检测域间隙的工程决策（~40min）**：W2 的 yolon(COCO) 对动画远景检出率 11%，亲自实测 Qwen3-VL grounding（含幻觉框回验）后拍板加 vlm_grounding 路径，两片段统一启用
+3. **真实运行与验收（~50min）**：每波 pytest 亲自跑 + 真实命令跑 A/B + 抽查 compare_viz 帧确认 sprite 贴入/背景一致
+4. **评估体系设计与盲评材料（~30min）**：指标/权重设计、盲评包制作（随机重命名隐藏 truth）；发现 VLM 评委全 5 分无区分度，改属性级核验（问「银白短发+藏青水手服」是否存在）
+
+## 失败案例分析：问题、原因及改进方向
+
+1. **COCO 域检测在动画上失效**（W2，已修复）：yolov8n 对 A 段远景人物检出率 11%（person 分数峰值 0.234）。原因：照片域训练 vs 赛璐璐上色/远景小目标的域间隙。改进：VLM grounding（动画域无间隙），代价 3.7-4.3s/keyframe + API 依赖；根治方向是 anime-finetune YOLO 权重（未做，如实标注）
+2. **VLM grounding 幻觉框**：魔法阵特效帧被报出「人物」bbox（裁剪回验发现框内是红色抽象形状）。原因：prompt 说「检测角色」，模型对发光人形特效过度泛化。缓解：keyframe 间隔降低单帧影响+跟踪平滑；改进方向：加入「特效帧过滤」判定（本版未实现）
+3. **sprite 在快切动作段崩坏**（B_sprite 动作 18.9 分/闪烁 1.51）：静态立绘贴入 6 镜头快切段，每镜 bbox 跳变导致贴图位置跳变+肢体完全不动。原因：sprite 方法没有时序模型，这是方法性上限。改进：生成式视频模型（如题目允许的 seedance 类逐段重生成）或至少姿态驱动 sprite 变形（未做）
+4. **palette 在 B 段画质掉分**（56.0）：快切段 bbox 边缘把背景卷进色板迁移，出现脏边。改进：更紧的人物分割（SAM 类 matting，未做）
+5. **VLM 盲评无区分度**：16 样本 15 个全 5 分（「No changes detected」）。原因：评委 VLM 宽容偏差+未替换帧左右完全一致的稀释。改进：只对被替换帧抽样+换严格 rubric+人评为主；本次以属性级核验替代（通过：替换帧中确有「银白短发+藏青水手服」角色，与人设一致）
+6. **glm-4.5v 429**：帧扫描与 W1 开发抢同一订阅配额。改进：切换 SiliconFlow 独立配额池（已完成）；日志在 docs/logs/scan_frames_v1.log
+7. **工具链阻塞**（如实记录）：terminal 审批拦截 curl 内联/rm -rf/自启 Chrome & 等；vision_analyze 对本地图幻觉——本地帧质检全部改走 SF VLM API（可靠）
 
 ## 目录结构
 
 ```
-├── assets/
-│   ├── raw_pv/          # 原始 PV 素材
-│   ├── segments/        # 切出的片段(cut 阶段产物)
-│   └── character_sheets/# 标准人设图(后续波次使用)
-├── config/
-│   ├── pipeline.yaml        # 主配置(实际使用)
-│   └── pipeline.example.yaml# 示例配置(注释丰富)
-├── docs/
-│   └── plan/            # 任务规划文档
-├── output/              # 每次 run 的产物:{run_id}/{stage}/ 与日志
-├── experiments/         # 评估报告与盲评材料(eval_{run_id}.json/.md)
-├── scripts/             # 辅助脚本
-├── src/anime_pv_replacer/
-│   ├── config.py        # 配置加载(YAML + env 定位 + deep_merge)
-│   ├── logging_utils.py # 结构化 JSONL 运行日志
-│   ├── segmentation.py  # ffprobe 探测 / ffmpeg 切片 / 镜头边界检测
-│   ├── segment.py       # CLI 入口(cut / shots 两个阶段)
-│   ├── detection.py     # 人物检测(yolon ONNX / cascade 降级)
-│   ├── tracking.py      # IoU 跟踪 + 丢失容忍 + bbox 平滑
-│   ├── track.py         # CLI 入口(detect / track 两个阶段)
-│   ├── vlm_grounding.py # VLM 人物检测(Qwen3-VL keyframe 策略,W3)
-│   ├── replacement.py   # sprite / palette 双路径合成器(W3)
-│   ├── compose.py       # 替换合成导出 CLI(W3)
-│   ├── evaluation.py    # 五维自动化评估指标(W4)
-│   └── evaluate.py      # 评估 CLI:扫 replace 组合出 JSON+MD 报告(W4)
-└── tests/               # pytest 测试
+config/          pipeline.yaml(真实实验配置) + example
+src/anime_pv_replacer/  segment(切片) / detection+vlm_grounding(定位) / tracking(跟踪)
+                  / replacement(sprite+palette) / compose(合成导出) / evaluate(评估)
+tests/           25 tests (pytest -q 全绿)
+scripts/         scan_frames.py(VLM 帧扫描)
+results/         final_videos(4 成片) + compare_grids(关键帧对比) + 人设图
+experiments/     eval_*.md/json(评估报告) + blind_review/(盲评材料与记录)
+docs/            MATERIALS / EVALUATION_DESIGN / EXPERIMENT_LEDGER / plan(TASK_W1-W5 任务书) / logs(委派原始记录)
+output/          每个 run 的中间产物(逐帧检测/跟踪/替换帧图,git 忽略大文件)
 ```
 
-## 安装
-
-需要 Python 3.12+、[uv](https://docs.astral.sh/uv/)、ffmpeg/ffprobe(macOS:`brew install ffmpeg`)。
+## 快速开始
 
 ```bash
-make setup        # 等价于:uv venv --python 3.12 && uv sync
-```
-
-另外复制 `.env.example` 为 `.env` 并填写 `ARK_API_KEY`(替换阶段的风格化 API 密钥,W1 阶段尚不需要)。
-
-## 一条命令跑切片
-
-```bash
-make segment
-# 或显式指定:
+make setup   # uv venv + 依赖
+make test    # 25 tests
+# 完整管线（A/B 同一命令，只有参数不同）
 uv run python -m anime_pv_replacer.segment --config config/pipeline.yaml --stage cut
-```
-
-按 `config/pipeline.yaml` 的 `segments` 列表把 PV 切成 `assets/segments/*.mp4`,
-每个片段的时长会经 ffprobe 复核,误差超过 0.2s 记 warning。
-
-镜头边界检测:
-
-```bash
-uv run python -m anime_pv_replacer.segment --config config/pipeline.yaml --stage shots
-```
-
-产物写入 `output/{run_id}/detection/shots.json`,运行日志(JSONL)在 `output/{run_id}/logs/`。
-
-## 人物检测与跟踪(W2)
-
-先确保片段已切出(`--stage cut`),再按「先 detect 后 track」两步跑:
-
-```bash
-# 逐帧人物检测(yolon 路径,首次运行自动下载 yolov8n.onnx 约 12MB 到 output/work/models/)
-uv run python -m anime_pv_replacer.track --config config/pipeline.yaml --segment A --stage detect
-
-# IoU 跟踪(自动读取最新一次 detect 产物)
+SILICONFLOW_API_KEY=sk-... uv run python -m anime_pv_replacer.vlm_grounding --config config/pipeline.yaml --segment A   # B 同理
 uv run python -m anime_pv_replacer.track --config config/pipeline.yaml --segment A --stage track
+uv run python -m anime_pv_replacer.compose --config config/pipeline.yaml --segment A --method sprite --chara-sheet assets/character_sheets/chara_aoi_sheet.png
+uv run python -m anime_pv_replacer.evaluate --config config/pipeline.yaml --run-dir output/20261012_w3eval
 ```
 
-- detect 产物:`output/{run_id}/detection/{SEG}/frames/`(逐帧 bbox json)+
-  `detections.json`(每帧人数、平均 score、检测耗时/帧、人数分布直方图)。
-- track 产物:`output/{run_id}/tracking/{SEG}/tracks.json`(每条轨迹的帧区间与逐帧
-  平滑 bbox、状态 TRACKING/LOST/RECOVER)+ `tracks_viz/` 每 10 帧一张画框可视化 jpg。
-- 检测双路径:`yolon`(onnxruntime CPU 推理,手写 letterbox/NMS 后处理,实测 1080p
-  约 17ms/帧)与 `cascade`(OpenCV Haar 人脸级联外扩人体近似,无权重降级路径)。
-  yolon 权重下载失败或库缺失时自动降级 cascade 并记 warning。
-- 阈值说明:`score_thresh` 默认 0.15 —— yolov8n 是 COCO 照片域模型,对动画画面
-  置信度整体偏低(远景段峰值仅 ~0.23),0.35 会把远景片段全部滤空。
-- CPU 预算超支(>150ms/帧)时可调 `detection.frame_stride > 1`:每 N 帧真实推理一次,
-  跳过帧按相邻两次检测线性插值(IoU 配对后过渡)。
-
-## VLM 人物检测(W3,可选付费路径)
-
-yolon(COCO 照片域)对动画远景检出率仅 11%,A 段几乎不可用;W3 提供
-Qwen3-VL(SiliconFlow)视觉接地检测作替代/补充:
-
-```bash
-export SILICONFLOW_API_KEY=sk-...   # 付费 API,额度自担;不设则人话提示并退出码 2
-uv run python -m anime_pv_replacer.vlm_grounding --config config/pipeline.yaml --segment A
-```
-
-- 成本策略:每 `detection.grounding_interval`(默认 5)帧真实请求一次 VLM,
-  中间帧按相邻两次检测线性插值 bbox;prompt 固定、temperature=0,输出解析
-  失败自动重试 1 次。
-- 产物与 `--stage detect` 完全同构(`frames/*.json` + `detections.json`),跑完后
-  直接 `--stage track` 即可消费,不改 W2 代码。请求直连不走系统代理。
-
-## 人物替换与合成导出(W3)
-
-前置:片段已切出、detect/track 产物已生成。三路径二选一:
-
-```bash
-# sprite 路径:人设图白底抠像,按 bbox 缩放、脚部对齐贴入(本地 CPU,零成本)
-uv run python -m anime_pv_replacer.compose --config config/pipeline.yaml --segment A --method sprite
-
-# palette 路径:bbox 区域向人设色板(kmeans k=8)做 LAB 颜色迁移(本地 CPU,零成本)
-uv run python -m anime_pv_replacer.compose --config config/pipeline.yaml --segment B --method palette \
-    --chara-sheet assets/character_sheets/chara_jun_sheet.png
-
-# api_doc 路径:未设 ARK_API_KEY 时人话提示并退出码 2;设了也只打印将要调用的
-# endpoint/参数,绝不真实调用付费 API
-uv run python -m anime_pv_replacer.compose --config config/pipeline.yaml --segment A --method api_doc
-```
-
-- `--track-id` 选要替换的轨迹(默认该片段最长 track);`--chara-sheet` 换人设图
-  (默认取 config `replacement.chara_sheet`)。
-- sprite 细节:三视图取「正面」中格、最大连通域剔除邻格越界残条;按 bbox 高度
-  缩放(宽超 1.6x 钳制)、脚部对齐 bbox 底边中心、alpha 羽化贴入;宽度序列做
-  滑动中值滤波(跳变 >15% 向中值回归)防闪烁;**bbox 外像素逐像素不动**。
-- palette 细节:LAB 空间 Reinhard 统计量迁移(均值漂移衰减 + 对比度钳制防翻白)
-  + edgePreservingFilter 去噪;区域外不动。
-- 产物落 `output/{run_id}/replace/{SEG}_{method}/`:`frames/` 逐帧 jpg、
-  `final.mp4`(crf/preset 取 config export 段)、`compare_viz/` 每 15 帧一张
-  「原帧|替换帧」对比图、`replace_summary.json`(帧数/耗时/轨迹/人设等)。
-
-## 替换质量评估(W4)
-
-对某个 run 目录下全部 `replace/{SEG}_{method}/` 组合跑五维自动化评估,出
-`experiments/eval_{run_id}.json` + `.md`(人读表格:指标原始值/映射分/加权总分,
-两片段并排;含跨片段泛化明细与成本记录表尾):
-
-```bash
-uv run python -m anime_pv_replacer.evaluate --config config/pipeline.yaml --run-dir output/{run_id}
-```
-
-- 指标(evaluat**ion**.py,纯 numpy/opencv 不引 torch):人物身份一致性(CLIP
-  不可用时的降级近似:LAB 直方图相关性 + 主色板余弦)、画面质量(Laplacian
-  方差清晰度 + 替换前后 SSIM 结构保留)、动作一致性(bbox 区域光流幅值序列相关)、
-  时序稳定性(闪烁比,1.0=与原视频一致)、背景保真度(bbox 外逐像素相等率 +
-  边缘带 SSIM)。输入不合法返回 None 记 warning,不中断整轮。
-- 计分:分段线性映射(0→0 / 0.5→60 / 0.75→80 / 1.0→100,时序按 |1-比| 反向),
-  权重按 `docs/EVALUATION_DESIGN.md`(25/15/20/20/10/10);原始帧重解码为
-  JPEG q90 与 W3 逐帧产物同编码比较。
-- W3 的四组合分属 4 个 run 目录时,先聚合再评(符号链接即可,不复制帧):
-
-```bash
-mkdir -p output/w3_eval/replace
-ln -s ../../{W3的run_id}/replace/A_sprite output/w3_eval/replace/A_sprite   # 其余组合同理
-uv run python -m anime_pv_replacer.evaluate --config config/pipeline.yaml --run-dir output/w3_eval
-```
-
-- 盲评 CSV 可选并入(`--blind`),columns 固定 `segment,method,dim,score,comment`,
-  1-5 分;在 md 里单独一节(汇总均分 + 逐行明细),不混入自动分。
-
-## 测试
-
-```bash
-make test   # 等价于:uv run pytest -q
-```
+外部依赖配置：`SILICONFLOW_API_KEY`（VLM 检测/扫描，无 key 时该阶段人话提示退出码 2）；`ZHIPU_API_KEY`（仅人设图再生成用，图已入库可不配）；`ARK_API_KEY`（付费生成式路径，**未授权未运行**，设置后也只打印调用计划不真调）。原始 PV 用 yt-dlp 下载（命令见 docs/MATERIALS.md），raw 视频不入 git。
