@@ -1,5 +1,7 @@
 # Anime PV Character Replacement Pipeline
 
+> 本仓库：**https://github.com/MrGendo/anime-pv-character-replacer**（public）
+
 2026 年 10 月新番「マジカル★エクスプローラー」第1弾PV（Aniplex 官方频道）→ 截取两个代表性片段（A：双人魔法阵场景 5.3s / B：单人空中动作序列 9.4s）→ 用标准日式人设图替换视频中人物 → 三条替换路径 + 统一评估，全部真实运行、有据可查。
 
 - PV 来源：<https://www.youtube.com/watch?v=bQuJywMCYWg>（官方） / 官网 <https://majieku.com>
