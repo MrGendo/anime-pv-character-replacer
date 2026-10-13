@@ -1,0 +1,11 @@
+{
+ "task_id": "cgt-20261013094856-tnols",
+ "status": "succeeded",
+ "usage_completion_tokens": 260100,
+ "wall_s": 447.1,
+ "duration_s": 10,
+ "resolution": "720p",
+ "model": "doubao-seedance-2-5-260628",
+ "out": "output/seedance/B_seedance.mp4",
+ "size_mb": 13.18
+}

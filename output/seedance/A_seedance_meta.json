@@ -1,0 +1,10 @@
+{
+ "task_id": "cgt-20261013093842-pxc8m",
+ "status": "succeeded",
+ "usage_completion_tokens": 216900,
+ "model": "doubao-seedance-2-5-260628",
+ "duration_s": 5,
+ "resolution": "720p",
+ "out": "/Users/Admin/Downloads/project/tiC_test/output/seedance/A_seedance.mp4",
+ "size_mb": 6.28
+}

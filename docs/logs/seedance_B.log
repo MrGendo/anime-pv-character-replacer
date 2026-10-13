@@ -1,0 +1,14 @@
+task cgt-20261013094856-tnols submitted (dur=10s res=720p)
+  ...poll 0: running
+  ...poll 5: running
+  ...poll 10: running
+  ...poll 15: running
+  ...poll 20: running
+  ...poll 25: running
+  ...poll 30: running
+  ...poll 35: running
+  ...poll 40: running
+  ...poll 45: running
+  ...poll 50: running
+DONE {"task_id": "cgt-20261013094856-tnols", "status": "succeeded", "usage_completion_tokens": 260100, "wall_s": 447.1, "duration_s": 10, "resolution": "720p", "model": "doubao-seedance-2-5-260628", "out": "output/seedance/B_seedance.mp4", "size_mb": 13.18}
+EXIT=0

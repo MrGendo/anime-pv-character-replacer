@@ -20,9 +20,20 @@
 | W3 | VLM grounding 检测 + sprite/palette 双路径替换 + 合成导出 | 17min 开发 + 25min 真实运行 | 18 tests ✅ |
 | W4 | 自动化评估(5 指标+权重) | 21min 开发 + 10min 验收 | 25 tests ✅ |
 | W5 | 结果整理/README/发布 | ~40min | 本文件 |
+| W6 | Seedance 视频生成路径（用户反馈 sprite 不合格后新增，付费授权） | ~50min（含 2 次生成+核验） | 见下节 |
 
-总预算 8-10 小时，实际 ~3.5 小时完成（素材侦察与实验设计占大头；扩展功能未做，聚焦双片段完整实验）。
+总预算 8-10 小时，实际 ~4.5 小时完成（素材侦察与实验设计占大头；扩展功能未做，聚焦双片段完整实验）。
 每阶段验收标准：pytest 全绿 + 真实命令跑出产物 + 本人抽查关键中间产物后才 commit。
+
+## Seedance 路径（W6，视频生成模型 vs 本地合成）
+
+用户审阅 sprite 结果后反馈「纯粹画框贴图，框不是脸、贴的是全身照片」——判定不合格，授权改用视频生成模型。W6 新增第三条替换路径并真实跑通 A/B：
+
+- 模型：doubao-seedance-2-5-260628（图生视频，参考图×2：人设图正面格 + 原片段首帧，prompt 指示按人设替换角色、保留镜头与背景），脚本 `scripts/seedance_replace.py`（API 契约复用生产验证过的 ark.py：多图 role=reference_image、任务轮询、usage tokens 记录）
+- 成本：A 5s = 216,900 tokens / ~207s；B 10s = 260,100 tokens / 447s；合计 477,000 completion tokens（真实 usage 记录在 output/seedance/*_meta.json 与台账）
+- 质检（VLM 抽帧核验）：身份 A 3/3、B 4/4 全部符合人设（银白短发水手服 / 金发学兰），**动作姿态为动态生成**（B 段格斗动作连续、非站桩）；已如实记录局限：镜头/背景相对原片有漂移（首帧锚定是概率性遵循，生成式重绘不保证场景逐像素还原）——对比图 `results/compare_grids/{A,B}_seedance_compare.jpg`
+- 结论：三条路径定位明确——sprite（零成本、背景零污染但贴纸感强）、palette（零成本、跨片段最稳但身份弱）、**Seedance（身份+动作最佳、有成本与场景漂移 trade-off）**；评估表中 sprite 的动作低分是方法性上限，非实现 bug
+
 
 ## Pipeline 设计考量和侧重点
 
@@ -31,6 +42,7 @@ PV 下载(1080p) → 镜头边界检测(HSV 直方图差分,53 镜头) → 片�
       → 人物定位: VLM grounding(Qwen3-VL keyframe@5 + 线性插值) [yolon 备选]
       → IoU 跟踪 + bbox 滑窗平滑
       → 人物替换: sprite(立绘贴入,脚部对齐,alpha 羽化) / palette(LAB 色板迁移+边缘保留)
+                 / seedance(图生视频重生成,W6 付费路径)
       → ffmpeg 合成导出(crf18) → 自动评估(5 维加权 100 分制) → 盲评
 ```
 
