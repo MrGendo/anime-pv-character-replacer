@@ -1,0 +1,17 @@
+{
+ "task_id": "cgt-20261013103924-ajjsn",
+ "status": "succeeded",
+ "usage_completion_tokens": 324900,
+ "wall_s": 239.7,
+ "duration_s": 5,
+ "resolution": "720p",
+ "model": "doubao-seedance-2-5-260628",
+ "mode": "first_last_frame",
+ "refs": [
+  "/tmp/jun_front.png",
+  "/tmp/anchor/sh1_first.jpg",
+  "/tmp/anchor/sh2_last.jpg"
+ ],
+ "out": "output/seedance/A_jun_full.mp4",
+ "size_mb": 11.28
+}

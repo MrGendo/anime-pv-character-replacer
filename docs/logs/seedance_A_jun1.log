@@ -1,0 +1,7 @@
+task cgt-20261013102105-xa7ot submitted (dur=2s res=720p)
+  ...poll 0: running
+  ...poll 5: running
+  ...poll 10: running
+  ...poll 15: running
+DONE {"task_id": "cgt-20261013102105-xa7ot", "status": "succeeded", "usage_completion_tokens": 108900, "wall_s": 166.9, "duration_s": 2, "resolution": "720p", "model": "doubao-seedance-2-5-260628", "mode": "first_last_frame", "refs": ["/tmp/jun_front.png", "/tmp/anchor/sh1_first.jpg", "/tmp/anchor/sh1_last.jpg"], "out": "output/seedance/A_jun_shot1.mp4", "size_mb": 3.74}
+EXIT=0

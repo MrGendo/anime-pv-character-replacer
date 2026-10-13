@@ -23,6 +23,25 @@
 
 合计 477,000 completion tokens。VLM 抽帧核验：身份（发色/瞳色/服装）A 3/3、B 4/4 符合人设；动作姿态为动态生成（非站桩贴图）；已知局限：镜头/背景与原片有漂移（生成式重绘不保证场景还原，prompt 锚定首帧背景仍是概率性遵循）。
 
+## 10-13 第二轮：动作保真迭代（首尾帧锚定 → reference_video 视频输入）
+
+用户反馈首轮生成「基本没有动作」，要求以 A 段原 5s 为基础、动作基本不变、人物换成 Jun。文档站被反爬拦截，改用 **API 报错探针**逆向出 Seedance 2.5 的隐藏能力与规则：
+
+| 探针 | 报错 | 逆向出的规则 |
+|---|---|---|
+| content 传 data:video base64 | `reference media mode requires video role to be reference_video` | 存在 r2v 模式，role=reference_video |
+| video_url 用 base64 | `reference_video must be provided as a web url` | 视频必须公网 URL |
+| 640x360 探针视频 | `video pixel count must be >= 407696` | 输入视频像素数下限 |
+
+| 实验 | 模式 | tokens | 结果 |
+|---|---|---|---|
+| A_jun_shot1 | 首尾帧锚定（子镜头1，2s 请求被钳到 5s） | 108,900 | 首帧 corr=1.000（锚定生效）；动作幅度 0.38×（拉伸变慢） |
+| A_jun_full | 首尾帧锚定整段 5s | 324,900 | 成片 11.3MB（用户中断，未细评） |
+| **A_jun_refvideo** | **reference_video（整段原片直喂）** | **216,900** | **动作幅度 0.97×（逐帧光流贴合原片）；镜头1 帧 corr 0.95-0.99；镜头2 特写重构（corr~0.4，构图漂移）；金发质心在画面中上（Jun 已应用）** |
+
+结论：**r2v（reference_video）是「动作基本不变」的正解**——源视频直接作为条件输入，光流轨迹逐帧对齐（0.97）；残余问题只剩特写镜头的构图漂移。源视频经 GitHub raw 分支（probe-assets）做公网 URL。脚本：scripts/seedance_framed.py（首尾帧）、scripts/seedance_refvideo.py（r2v，推荐）。
+今日累计 1,127,700 tokens（5 次生成）。
+
 
 ## 外部 API 调用记录（成本透明）
 

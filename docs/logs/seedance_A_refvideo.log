@@ -1,0 +1,7 @@
+task cgt-20261013105504-vpcrc submitted (reference_video mode, dur=5s)
+  ...poll 0: running
+  ...poll 5: running
+  ...poll 10: running
+  ...poll 15: running
+DONE {"task_id": "cgt-20261013105504-vpcrc", "status": "succeeded", "usage_completion_tokens": 216900, "wall_s": 214.9, "duration_s": 5, "resolution": "720p", "model": "doubao-seedance-2-5-260628", "mode": "reference_video", "video_url": "https://raw.githubusercontent.com/MrGendo/anime-pv-character-replacer/probe-assets/probe/A_full.mp4", "sheet": "/tmp/jun_front.png", "out": "output/seedance/A_jun_refvideo.mp4", "size_mb": 4.4}
+EXIT=0
